@@ -480,6 +480,20 @@ footer .ornament {
 }
 html, body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 img { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
+.app-card { display: flex; flex-direction: column; padding: 28px 26px 24px; background: var(--paper-deep); border-top: 3px solid var(--turmeric); border-radius: 4px; }
+.app-card[hidden] { display: none; }
+.app-fam { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--turmeric); margin-bottom: 10px; }
+.app-card h4 { font-family: "Fraunces", serif; font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+.app-card p { text-align: left; font-size: 15px; color: var(--ink-soft); margin: 0 0 14px; line-height: 1.55; }
+.app-cite { font-size: 13px; color: var(--ink-mute); line-height: 1.5; margin-bottom: 18px; word-break: break-word; }
+.app-cite a { color: var(--ink-mute); }
+.app-links { display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap; }
+.app-btn { display: inline-block; padding: 8px 16px; font-size: 13px; text-decoration: none; background: var(--kumkum); color: var(--paper); border: 1px solid var(--kumkum); border-radius: 2px; }
+.app-btn:hover { background: var(--kumkum-deep); border-color: var(--kumkum-deep); }
+.app-btn.ghost { background: transparent; color: var(--kumkum); }
+.app-btn.ghost:hover { background: var(--kumkum); color: var(--paper); }
+@media (max-width: 800px) { .app-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -500,10 +514,11 @@ img { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
       <button class="tab" data-tab="about"><span class="tab-num">02</span>About</button>
       <button class="tab" data-tab="experience"><span class="tab-num">03</span>Experience</button>
       <button class="tab" data-tab="research"><span class="tab-num">04</span>Research</button>
-      <button class="tab" data-tab="teaching"><span class="tab-num">05</span>Teaching</button>
-      <button class="tab" data-tab="recognition"><span class="tab-num">06</span>Recognition</button>
-      <button class="tab" data-tab="reflections"><span class="tab-num">07</span>Reflections</button>
-      <button class="tab" data-tab="contact"><span class="tab-num">08</span>Contact</button>
+      <button class="tab" data-tab="apps"><span class="tab-num">05</span>Apps</button>
+      <button class="tab" data-tab="teaching"><span class="tab-num">06</span>Teaching</button>
+      <button class="tab" data-tab="recognition"><span class="tab-num">07</span>Recognition</button>
+      <button class="tab" data-tab="reflections"><span class="tab-num">08</span>Reflections</button>
+      <button class="tab" data-tab="contact"><span class="tab-num">09</span>Contact</button>
     </nav>
   </div>
 </div>
@@ -797,6 +812,92 @@ img { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
     <li><span class="label">Statistical Reviewer · F1000 / Frontiers / BMC journals</span><span class="meta">2023 onwards</span></li>
     <li><span class="label">Reviewer · PLOS One, Hindawi, Annals of Operations Research</span><span class="meta">Various</span></li>
   </ul>
+</section>
+
+<section class="panel" id="apps">
+  <div class="eyebrow">Apps</div>
+  <h2 class="h-section">Interactive learning tools I have built.</h2>
+  <p class="h-sub">Free, browser-based resources for learning statistics, data analysis and statistical software. Each runs entirely in the browser.</p>
+
+  <div class="pub-years" id="appFilter">
+    <button class="year-btn active" data-family="all">All</button>
+    <button class="year-btn" data-family="foundations">Foundations courses</button>
+    <button class="year-btn" data-family="explorers">Method explorers</button>
+    <button class="year-btn" data-family="software">Software tutors</button>
+  </div>
+
+  <div class="app-grid">
+    <div class="app-card" data-family="foundations">
+      <div class="app-fam">Foundations course</div>
+      <h4>Understanding Data: Foundations</h4>
+      <p>An interactive course from variable types through descriptive statistics, group comparisons, associations and regression, ending in a data analytics challenge.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding data: Foundations</em> [Interactive learning resource]. Available at <a href="https://rvanilakshmi.github.io/basicstats/" target="_blank" rel="noopener">rvanilakshmi.github.io/basicstats/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/basicstats/" target="_blank" rel="noopener">Open app</a></div>
+    </div>
+    <div class="app-card" data-family="foundations">
+      <div class="app-fam">Foundations course</div>
+      <h4>Understanding Data: Foundations in Reproductive Sciences</h4>
+      <p>The foundations course rebuilt around examples from reproductive sciences, with mini quizzes, a final quiz, a challenge and a glossary.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding Data: Foundations in Reproductive Sciences</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.21230310" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.21230310</a> Available at <a href="https://rvanilakshmi.github.io/reprostats/" target="_blank" rel="noopener">rvanilakshmi.github.io/reprostats/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/reprostats/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.21230310" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="foundations">
+      <div class="app-fam">Foundations course</div>
+      <h4>Understanding Data: Foundations in Regenerative Medicine</h4>
+      <p>The foundations course set in regenerative medicine, with section quizzes, a data analytics challenge and a glossary.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding Data: Foundations in Regenerative Medicine</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.22680763" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.22680763</a> Available at <a href="https://rvanilakshmi.github.io/regmedstats/" target="_blank" rel="noopener">rvanilakshmi.github.io/regmedstats/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/regmedstats/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.22680763" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="foundations">
+      <div class="app-fam">Foundations course</div>
+      <h4>Understanding Biostatistics for Regenerative Medicine</h4>
+      <p>Biostatistics for regenerative medicine, from variables and sampling through probability distributions and regression to sample size.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding Biostatistics for Regenerative Medicine</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.22680763" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.22680763</a> Available at <a href="https://rvanilakshmi.github.io/rmstats/" target="_blank" rel="noopener">rvanilakshmi.github.io/rmstats/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/rmstats/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.22680763" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="explorers">
+      <div class="app-fam">Method explorer</div>
+      <h4>SampleAlytics</h4>
+      <p>A learning tool to explore sampling methods, compare probability and non-probability designs, and choose and report a method with confidence.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>SampleAlytics: A Learning Tool to Explore Sampling Methods</em>. Available at <a href="https://rvanilakshmi.github.io/SampleAlytics" target="_blank" rel="noopener">rvanilakshmi.github.io/SampleAlytics</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/SampleAlytics" target="_blank" rel="noopener">Open app</a></div>
+    </div>
+    <div class="app-card" data-family="explorers">
+      <div class="app-fam">Method explorer</div>
+      <h4>ClusterAlytics</h4>
+      <p>A learning tool to explore K-means and hierarchical clustering algorithms.</p>
+      <div class="app-cite">Vani Lakshmi R (2026). <em>ClusterAlytics: A Learning Tool to Explore K-means and Hierarchical Clustering Algorithms</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.21219851" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.21219851</a> Available at <a href="https://rvanilakshmi.github.io/ClusterAlytics" target="_blank" rel="noopener">rvanilakshmi.github.io/ClusterAlytics</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/ClusterAlytics" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.21219851" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="explorers">
+      <div class="app-fam">Method explorer</div>
+      <h4>ChatAlytics</h4>
+      <p>A statistically significant friendship: statistics taught through a friendly conversation that plays out on a phone screen, with definitions alongside.</p>
+      <div class="app-cite">Vani Lakshmi R (2026). <em>ChatAlytics: A statistically significant friendship- A tool to explore statistics using friendly conversations</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.21138799" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.21138799</a> Available at <a href="https://rvanilakshmi.github.io/ChatAlytics" target="_blank" rel="noopener">rvanilakshmi.github.io/ChatAlytics</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/ChatAlytics" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.21138799" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="software">
+      <div class="app-fam">Software tutor</div>
+      <h4>rexplore</h4>
+      <p>A tutorial to explore and learn R fundamentals in a familiar IDE layout, with course datasets, a console, demo code, lessons and a glossary.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>rexplore: A tutorial to explore and learn R fundamentals</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.22922651" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.22922651</a> Available at <a href="https://rvanilakshmi.github.io/rexplore/" target="_blank" rel="noopener">rvanilakshmi.github.io/rexplore/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/rexplore/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.22922651" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="software">
+      <div class="app-fam">Software tutor</div>
+      <h4>Jamovi Explorer: Randomised Trial</h4>
+      <p>Understanding a randomised trial using jamovi, walking through variables, data, analysis and reporting on a simulated chronic low back pain trial.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding a randomised trial using Jamovi: A Jamovi Explorer</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.22882760" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.22882760</a> Available at <a href="https://rvanilakshmi.github.io/jexplore/" target="_blank" rel="noopener">rvanilakshmi.github.io/jexplore/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/jexplore/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.22882760" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    <div class="app-card" data-family="software">
+      <div class="app-fam">Software tutor</div>
+      <h4>Jamovi Explorer: Student Well-being</h4>
+      <p>Understanding student well-being using jamovi, from variables and data through an analysis demo to a report.</p>
+      <div class="app-cite">Vani Lakshmi, R. (2026). <em>Understanding student well being using Jamovi: A Jamovi Explorer (Version 1)</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.22706261" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.22706261</a> Available at <a href="https://rvanilakshmi.github.io/jexplorer/" target="_blank" rel="noopener">rvanilakshmi.github.io/jexplorer/</a></div>
+      <div class="app-links"><a class="app-btn" href="https://rvanilakshmi.github.io/jexplorer/" target="_blank" rel="noopener">Open app</a><a class="app-btn ghost" href="https://doi.org/10.5281/zenodo.22706261" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+  </div>
 </section>
 
 <section class="panel" id="teaching">
@@ -1145,6 +1246,20 @@ document.querySelectorAll('.tab').forEach(btn => {
   });
 
   render('all');
+})();
+
+(function(){
+  const bar = document.getElementById('appFilter');
+  if (!bar) return;
+  const cards = document.querySelectorAll('.app-card');
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('.year-btn');
+    if (!btn) return;
+    bar.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.family;
+    cards.forEach(c => { c.hidden = !(f === 'all' || c.dataset.family === f); });
+  });
 })();
 </script>
 
