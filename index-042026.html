@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Vani Lakshmi R · Portfolio · April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F8F1E4;
+  --paper-deep: #F0E5CE;
+  --paper-shadow: #E8DAB8;
+  --ink: #1B1A17;
+  --ink-soft: #3A3833;
+  --ink-mute: #6A6760;
+  --ink-faint: #A09C92;
+  --kumkum: #A8231A;
+  --kumkum-deep: #7A1812;
+  --turmeric: #D4923B;
+  --turmeric-soft: #E5B065;
+  --teal: #1F6F6B;
+  --teal-deep: #154845;
+  --indigo: #2C2A6B;
+  --indigo-soft: #4A4795;
+  --rule: rgba(27,26,23,.14);
+  --rule-soft: rgba(27,26,23,.07);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Gentium Plus", Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 15px;
+  font-feature-settings: "kern", "liga", "onum";
+  background-image:
+    radial-gradient(ellipse at top left, rgba(212, 146, 59, .045) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(31, 111, 107, .04) 0%, transparent 55%);
+  min-height: 100vh;
+}
+.serif-display { font-family: "Fraunces", Georgia, serif; }
+.mono { font-family: "JetBrains Mono", Menlo, monospace; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 28px 0 22px; position: relative; }
+.masthead::before {
+  content: ""; position: absolute; bottom: -1px; left: 50%;
+  transform: translateX(-50%); width: 80px; height: 3px; background: var(--kumkum);
+}
+.mast-row { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.mast-name {
+  font-family: "Fraunces", serif; font-weight: 500; font-size: 22px;
+  letter-spacing: -.01em; font-variation-settings: "opsz" 144; color: var(--ink);
+}
+.mast-name .small {
+  font-size: 12px; font-weight: 400; color: var(--ink-mute);
+  letter-spacing: .02em; margin-left: 8px;
+}
+.mast-meta {
+  font-family: "Gentium Plus", serif; font-style: italic;
+  color: var(--ink-mute); font-size: 14px; letter-spacing: .02em;
+}
+.mast-meta .dot { color: var(--turmeric); margin: 0 8px; }
+
+.nav-wrap {
+  position: sticky; top: 0; z-index: 50; background: var(--paper);
+  border-bottom: 1px solid var(--rule); margin-top: 1px;
+}
+.nav-wrap::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px;
+  height: 8px; background: linear-gradient(to bottom, rgba(27,26,23,.05), transparent);
+  pointer-events: none;
+}
+nav.tabs { display: flex; gap: 0; flex-wrap: wrap; padding: 4px 0; justify-content: space-between; }
+.tab {
+  font-family: "Fraunces", serif; font-size: 14px; font-weight: 400;
+  color: var(--ink-mute); background: none; border: none;
+  padding: 14px 18px; cursor: pointer; position: relative; transition: color .25s ease;
+  letter-spacing: .01em;
+}
+.tab:hover { color: var(--ink); }
+.tab.active { color: var(--kumkum-deep); font-weight: 500; }
+.tab.active::after {
+  content: ""; position: absolute; bottom: -1px; left: 20px; right: 20px;
+  height: 2px; background: var(--kumkum);
+}
+.tab-num {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  vertical-align: super; margin-right: 6px; opacity: .55; letter-spacing: 0;
+}
+
+.panel { display: none; padding: 48px 0 56px; animation: fade .4s ease; }
+.panel.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace; font-size: 11px;
+  letter-spacing: .08em; color: var(--turmeric);
+  margin-bottom: 14px; display: flex; align-items: center; gap: 12px;
+}
+.eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); max-width: 80px; }
+h1, h2, h3 { font-family: "Fraunces", serif; font-weight: 400; color: var(--ink); letter-spacing: -.01em; }
+.h-display {
+  font-size: clamp(36px, 5vw, 60px); line-height: 1.05;
+  font-variation-settings: "opsz" 144; letter-spacing: -.02em; font-weight: 300;
+}
+.h-display em { font-style: italic; font-weight: 400; color: var(--kumkum-deep); }
+.h-section {
+  font-size: clamp(26px, 3.2vw, 34px); margin-bottom: 8px; letter-spacing: -.015em;
+}
+.h-sub {
+  font-size: 17px; color: var(--ink-soft); margin-bottom: 32px;
+  font-style: italic; font-weight: 300; text-align: left;
+}
+p {
+  margin-bottom: 1em; color: var(--ink-soft);
+  text-align: justify; text-justify: inter-word;
+  hyphens: auto; -webkit-hyphens: auto;
+}
+p:last-child { margin-bottom: 0; }
+a { color: var(--kumkum-deep); text-decoration: none; border-bottom: 1px solid rgba(168, 35, 26, .35); transition: border-color .2s ease; }
+a:hover { border-bottom-color: var(--kumkum); }
+
+.hero { padding: 24px 0 16px; max-width: 850px; }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(240px, 1fr);
+  gap: 48px;
+  align-items: start;
+  padding-top: 16px;
+}
+.home-left { min-width: 0; }
+.home-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.home-photo {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1.05;
+  background: var(--paper-deep);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.home-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(.92);
+}
+.home-photo::after {
+  content: ""; position: absolute; inset: 0;
+  border: 6px solid var(--paper);
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.home-figures {
+  background: var(--paper-deep);
+  padding: 22px 24px;
+  border-left: 2px solid var(--turmeric);
+  border-radius: 2px;
+}
+.hf-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(27,26,23,.06);
+  gap: 12px;
+}
+.hf-row:last-child { border-bottom: none; }
+.hf-v {
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--kumkum-deep);
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+.hf-l {
+  font-family: "Gentium Plus", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-mute);
+  text-align: right;
+}
+
+.home-quote {
+  position: relative;
+  padding: 18px 24px 18px 30px;
+  border-left: 3px solid var(--kumkum);
+}
+.home-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0; left: 12px;
+  font-family: "Fraunces", serif;
+  font-size: 48px;
+  color: var(--turmeric);
+  line-height: 1;
+  opacity: .5;
+}
+.home-quote p {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+  text-align: left;
+}
+.hero-greeting { margin-bottom: 16px; }
+.hero-bio { font-family: "Gentium Plus", serif; font-size: 17px; line-height: 1.65; color: var(--ink-soft); max-width: 680px; }
+.hero-bio strong { color: var(--ink); font-weight: 400; }
+
+.role-card {
+  margin-top: 28px; padding: 24px 28px; background: var(--paper-deep);
+  border-left: 3px solid var(--kumkum); position: relative; max-width: 650px;
+}
+.role-label {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: .1em; color: var(--kumkum);
+  margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+}
+.role-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--kumkum); display: inline-block; }
+.role-title { font-family: "Fraunces", serif; font-size: 19px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+.role-meta { font-style: italic; color: var(--ink-mute); font-size: 14px; margin-top: 6px; }
+
+.three-blocks {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule);
+}
+.three-blocks h3 {
+  font-size: 14px; font-family: "Fraunces", serif;
+  letter-spacing: .02em; margin-bottom: 12px; color: var(--kumkum-deep); font-weight: 600;
+}
+.three-blocks p { font-size: 14px; line-height: 1.6; }
+
+.about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 64px; margin-bottom: 56px; align-items: start; }
+.about-photo {
+  width: 220px; height: 220px; border-radius: 6px; background: var(--paper-deep);
+  overflow: hidden; position: relative; border: 1px solid var(--rule);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.02) saturate(.92); }
+.about-photo::after { content: ""; position: absolute; inset: 0; border: 6px solid var(--paper); pointer-events: none; }
+
+.bio-text { font-size: 16px; line-height: 1.7; }
+.bio-text p { margin-bottom: 1.1em; }
+.bio-text .lead {
+  font-family: "Fraunces", serif; font-size: 19px; line-height: 1.45;
+  color: var(--ink); font-weight: 400; font-style: italic; margin-bottom: 1em;
+}
+.bio-text .lead::first-letter {
+  font-size: 48px; line-height: 0.85; float: left; margin: 6px 10px 0 0;
+  color: var(--kumkum-deep); font-style: normal; font-weight: 600;
+}
+
+.numbers-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px;
+  margin-top: 56px; padding: 32px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.num-cell { text-align: left; }
+.num-val { font-family: "Fraunces", serif; font-size: 28px; font-weight: 500; color: var(--kumkum-deep); line-height: 1; letter-spacing: -.02em; }
+.num-lbl { font-family: "Gentium Plus", serif; font-size: 12px; font-style: italic; color: var(--ink-mute); margin-top: 6px; line-height: 1.3; }
+
+.edu-list { margin-top: 32px; }
+.edu-item {
+  display: grid; grid-template-columns: 90px 1fr; gap: 24px;
+  padding: 20px 0; border-bottom: 1px solid var(--rule-soft); align-items: baseline;
+}
+.edu-item:last-child { border-bottom: none; }
+.edu-year { font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--turmeric); letter-spacing: .05em; font-weight: 500; }
+.edu-title { font-family: "Fraunces", serif; font-size: 16px; font-weight: 500; color: var(--ink); }
+.edu-meta { font-size: 13px; color: var(--ink-mute); margin-top: 3px; font-style: italic; }
+.edu-tag {
+  display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: .04em; color: var(--teal-deep);
+  background: rgba(31, 111, 107, .1); padding: 2px 8px; border-radius: 2px;
+  margin-left: 8px; vertical-align: middle;
+}
+.edu-tag.pursuing { color: var(--kumkum-deep); background: rgba(168, 35, 26, .1); }
+
+.subsection { margin: 56px 0 16px; }
+.subsection .eyebrow { margin-bottom: 6px; }
+.subsection h3 {
+  font-family: "Fraunces", serif; font-size: 22px; font-weight: 400;
+  color: var(--ink); letter-spacing: -.01em; margin-bottom: 22px;
+}
+
+.exp-block { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
+.exp-block:last-child { border-bottom: none; }
+.exp-header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.exp-org { font-family: "Fraunces", serif; font-size: 22px; font-weight: 500; color: var(--ink); }
+.exp-period { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--turmeric); letter-spacing: .05em; }
+.exp-role { font-family: "Gentium Plus", serif; font-style: italic; font-size: 16px; color: var(--ink-mute); margin-bottom: 18px; }
+.exp-list { list-style: none; padding: 0; }
+.exp-list li {
+  padding-left: 24px; margin-bottom: 14px; position: relative;
+  color: var(--ink-soft); line-height: 1.65;
+}
+.exp-list li::before { content: "—"; position: absolute; left: 0; color: var(--turmeric); }
+.current-pip {
+  display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: .04em; background: var(--kumkum);
+  color: var(--paper); padding: 3px 10px; border-radius: 2px;
+  margin-left: 10px; vertical-align: middle; font-weight: 500;
+}
+
+.research-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px;
+  padding: 32px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); margin-bottom: 48px;
+}
+.r-stat .v { font-family: "Fraunces", serif; font-size: 32px; font-weight: 400; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+.r-stat .l { font-size: 12px; color: var(--ink-mute); font-style: italic; margin-top: 6px; }
+
+.pub-item {
+  padding: 20px 0; border-bottom: 1px solid var(--rule-soft);
+  display: grid; grid-template-columns: 70px 1fr; gap: 24px; align-items: baseline;
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: .04em;
+  padding-top: 5px;
+}
+.pub-year { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--turmeric); letter-spacing: .05em; padding-top: 4px; }
+.pub-text { font-size: 14px; line-height: 1.6; color: var(--ink-soft); text-align: justify; hyphens: auto; }
+.pub-text strong { color: var(--ink); font-weight: 600; }
+.pub-text em { font-style: italic; color: var(--ink); }
+.pub-text a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--teal-deep);
+  border-bottom: none;
+  margin-left: 4px;
+}
+
+.pub-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.year-btn {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  background: transparent;
+  color: var(--ink-mute);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: .02em;
+  transition: all .2s ease;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.year-btn:hover {
+  color: var(--ink);
+  background: var(--paper-deep);
+}
+.year-btn.active {
+  background: var(--kumkum);
+  color: var(--paper);
+  border-color: var(--kumkum);
+}
+.year-btn .yr-count {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: .7;
+}
+.year-btn.active .yr-count { opacity: .85; }
+.pub-tag { font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .02em; color: var(--teal-deep); text-align: right; padding-top: 6px; }
+
+.plain-list { list-style: none; padding: 0; }
+.plain-list li {
+  padding: 16px 0; border-bottom: 1px solid var(--rule-soft);
+  display: flex; justify-content: space-between; gap: 24px; align-items: baseline; flex-wrap: wrap;
+}
+.plain-list li:last-child { border-bottom: none; }
+.plain-list .label { font-family: "Fraunces", serif; font-size: 15px; color: var(--ink); font-weight: 500; flex: 1; min-width: 200px; }
+.plain-list .meta { font-style: italic; color: var(--ink-mute); font-size: 13px; }
+
+.tch-block { margin-bottom: 56px; }
+.course-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 32px; }
+.course-pill {
+  font-family: "Gentium Plus", serif; font-size: 14px; padding: 6px 14px;
+  background: var(--paper-deep); color: var(--ink-soft); border-radius: 16px; font-style: italic;
+}
+
+.workshop-cities { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-top: 24px; }
+.city-tile { background: var(--paper-deep); padding: 16px 20px; border-radius: 4px; border-left: 2px solid var(--turmeric); }
+.city-name { font-family: "Fraunces", serif; font-size: 16px; font-weight: 500; color: var(--ink); }
+.city-count { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--ink-mute); margin-top: 4px; }
+
+.award-item {
+  padding: 24px 0; border-bottom: 1px solid var(--rule-soft);
+  display: grid; grid-template-columns: 90px 1fr; gap: 32px; align-items: baseline;
+}
+.award-item:last-child { border-bottom: none; }
+.award-year { font-family: "Fraunces", serif; font-size: 18px; font-weight: 500; color: var(--kumkum-deep); }
+.award-title { font-family: "Fraunces", serif; font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+.award-issuer { font-size: 13px; color: var(--ink-mute); font-style: italic; }
+
+.reflection { max-width: 820px; margin: 0 auto 48px; }
+.reflection .eyebrow { justify-content: center; }
+.reflection .eyebrow::after, .reflection .eyebrow::before { display: none; }
+.reflection h2 { text-align: center; margin-bottom: 8px; }
+.reflection .h-sub { text-align: center; }
+.credo-block { margin: 48px auto; padding: 36px 0; border-top: 1px solid var(--rule); max-width: 820px; }
+.credo-block:last-child { border-bottom: 1px solid var(--rule); }
+.credo-block h3 {
+  font-family: "Fraunces", serif; font-style: italic; font-size: 24px;
+  font-weight: 400; color: var(--kumkum-deep); margin-bottom: 18px; letter-spacing: -.01em;
+}
+.credo-block p { font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+.beyond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 48px; max-width: 820px; margin-left: auto; margin-right: auto; }
+.beyond-card { padding: 24px; background: var(--paper-deep); border-radius: 4px; }
+.beyond-card .icon { font-size: 24px; color: var(--turmeric); margin-bottom: 8px; font-family: "Fraunces", serif; font-style: italic; }
+.beyond-card h4 { font-family: "Fraunces", serif; font-size: 17px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.beyond-card p { font-size: 13px; color: var(--ink-mute); margin: 0; line-height: 1.5; text-align: left; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; }
+.contact-section h3 {
+  font-family: "Fraunces", serif; font-size: 14px;
+  letter-spacing: .02em; color: var(--kumkum); margin-bottom: 16px; font-weight: 600;
+}
+.contact-section p, .contact-section a { font-size: 15px; line-height: 1.8; color: var(--ink-soft); text-align: left; }
+.profile-links { list-style: none; }
+.profile-links li { padding: 10px 0; border-bottom: 1px solid var(--rule-soft); }
+.profile-links a {
+  font-family: "JetBrains Mono", monospace; font-size: 13px;
+  color: var(--teal-deep); border-bottom: none; letter-spacing: .02em;
+}
+.profile-links a:hover { color: var(--kumkum); }
+.profile-links .name {
+  font-family: "Fraunces", serif; font-style: italic;
+  color: var(--ink-mute); font-size: 13px; margin-right: 12px;
+}
+
+footer {
+  border-top: 1px solid var(--rule); padding: 28px 0 32px; margin-top: 24px;
+  text-align: center; font-size: 13px; color: var(--ink-mute);
+}
+footer p { color: var(--ink-mute); margin: 0; text-align: center; }
+footer .ornament {
+  font-family: "Fraunces", serif; font-size: 18px; color: var(--turmeric);
+  margin-bottom: 10px; letter-spacing: .8em; padding-left: .8em;
+}
+
+@media (max-width: 800px) {
+  .shell { padding: 0 20px; }
+  body { font-size: 16px; }
+  .home-grid { grid-template-columns: 1fr; gap: 32px; }
+  .home-photo { max-width: 280px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo { width: 160px; height: 160px; }
+  .three-blocks { gap: 32px; margin-top: 56px; padding-top: 32px; }
+  .pub-item { grid-template-columns: 60px 1fr; }
+  .pub-tag { grid-column: 1 / -1; text-align: left; padding-top: 0; }
+  .award-item { grid-template-columns: 70px 1fr; gap: 16px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .tab { padding: 12px 14px; font-size: 13px; }
+  .h-display { font-size: 44px; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <div class="mast-row">
+      <div class="mast-name">Dr Vani Lakshmi R <span class="small">· MSc, PhD (Statistics), MBA</span></div>
+      <div class="mast-meta">Data Doctor <span class="dot">·</span> Educator <span class="dot">·</span> Researcher <span class="dot">·</span> Writer</div>
+    </div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <div class="shell">
+    <nav class="tabs">
+      <button class="tab active" data-tab="home"><span class="tab-num">01</span>Home</button>
+      <button class="tab" data-tab="about"><span class="tab-num">02</span>About</button>
+      <button class="tab" data-tab="experience"><span class="tab-num">03</span>Experience</button>
+      <button class="tab" data-tab="research"><span class="tab-num">04</span>Research</button>
+      <button class="tab" data-tab="teaching"><span class="tab-num">05</span>Teaching</button>
+      <button class="tab" data-tab="recognition"><span class="tab-num">06</span>Recognition</button>
+      <button class="tab" data-tab="reflections"><span class="tab-num">07</span>Reflections</button>
+      <button class="tab" data-tab="contact"><span class="tab-num">08</span>Contact</button>
+    </nav>
+  </div>
+</div>
+
+<main class="shell">
+
+<!-- HOME -->
+<section class="panel active" id="home">
+  <div class="home-grid">
+    <div class="home-left">
+      <div class="eyebrow">Bengaluru, India · April 2026 Edition</div>
+      <h1 class="h-display">Hello, I am <em>Vani</em>.</h1>
+      <p class="hero-bio" style="margin-top:12px;">
+        I am a <strong>Data Doctor, Educator, Researcher, and Writer</strong>, by training a statistician with a doctoral degree, who has moved from academic leadership to industry practice. After over a decade in academia, where I taught, mentored, and built public-health programmes at <strong>Manipal Academy of Higher Education</strong>, I now work in oncology drug development at <strong>Eli Lilly</strong>, Bengaluru.
+      </p>
+      <p class="hero-bio">
+        I write, research, and teach across the disciplines I love: biostatistics, clinical trials, evidence synthesis, and the responsible use of AI in medicine. I work not just with data, but with evidence.
+      </p>
+      <div class="role-card">
+        <div class="role-label">Currently</div>
+        <div class="role-title">Associate Advisor, Statistics, Oncology</div>
+        <div class="role-meta">Global Statistical Sciences &middot; Eli Lilly and Company, Bengaluru</div>
+      </div>
+    </div>
+
+    <aside class="home-right">
+      <div class="home-photo">
+        <img src="data:image/png;base64,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" alt="Dr Vani Lakshmi R">
+      </div>
+      <div class="home-figures">
+        <div class="hf-row"><span class="hf-v">163</span><span class="hf-l">publications</span></div>
+        <div class="hf-row"><span class="hf-v">512</span><span class="hf-l">citations</span></div>
+        <div class="hf-row"><span class="hf-v">30+</span><span class="hf-l">PROSPERO protocols</span></div>
+        <div class="hf-row"><span class="hf-v">8</span><span class="hf-l">edited volumes</span></div>
+        <div class="hf-row"><span class="hf-v">100+</span><span class="hf-l">theses supervised</span></div>
+      </div>
+      <div class="home-quote">
+        <p>"The mathematics is the easy part. The hard part is listening long enough to understand what someone actually needs from the numbers."</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="three-blocks">
+    <div>
+      <h3>Clinical Trials at Lilly</h3>
+      <p>Phase II and III oncology trials, statistical analysis plans, regulatory submissions to the FDA and EU, and data monitoring committee preparations under Lilly's protocols.</p>
+    </div>
+    <div>
+      <h3>Cross-domain Translation</h3>
+      <p>Methodological rigour with cross-domain translation, the ability to move between mathematical statistics and applied clinical research, between academia and industry, between doing the work and teaching it.</p>
+    </div>
+    <div>
+      <h3>What is Next</h3>
+      <p>Building depth in the regulatory landscape of global drug development, responsible AI applications in clinical research, and continuing to teach and mentor across institutions. Always learning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="panel" id="about">
+  <div class="eyebrow">Biography</div>
+  <h2 class="h-section">A career across disciplines and decades.</h2>
+  <p class="h-sub">From gamma distribution theory to global oncology trials.</p>
+  <div class="about-grid">
+    <div class="about-photo">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADwAPADASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAABAMFBgcAAQIICf/EADoQAAEDAwIEBgAFAgUDBQAAAAECAxEABCEFMQYSQVEHEyJhcYEIFDKRoRUjUrHB0fAXJUIWJDRi8f/EABsBAAIDAQEBAAAAAAAAAAAAAAAEAgMFAQYH/8QAKBEAAgICAgIBBQACAwAAAAAAAAIBAwQREiEFMSIGEzJBURUjM2GB/9oADAMBAAIRAxEAPwD1FWRW4FZWgZ5qKyK3WUAaisrZrUVIDR2rVdRWjtQBqsrKygDlQzWors7VyaANGuIPauxnbNZFdInFcnau1ATWiMVMBMjBrg7UqdjXBGKkcOCMUmulSKTWKkRkTNcK3rtYrhYxXVICa9jSK6XXtSK6mREVneh3RvRCgKQdzNWQcBHKFeAmjHBQr43qwiAv7mm262NOb4yabLrY0AXJWVlZWSOmVlZWUAZWVlZQBhrUVusoA1FZFbrKAOAMmsKRtShSBWiAJEwQOvSgBMCCa1SqwlCJVvE5oN6/s2AS9dMNxvzOAR+5qQaFlCuTihTrOk8nmHU7IJmObz0RPaZom3urW5b8y3uG3k9FIUCD9iuhMSaXNcwaUWIIGxImD/pXO4JGRMT79qnBASVvXC6WIEwM/FJrFTUBBdc0ouklb1OCo4VSC+tLq3pFypERBdIOUQukHBU1OAznWhX8k0U6N6GdxNWEQF8ZNNl2MGnR/c023WxoAuGsrKysodMrKysoAysrKygDKysrKANj+K6AE/zWkxG+O9bWtKEc6sgYImJFBIxxQbSpS1BAQJJUYA9z2qgvF78SGjcNXTuj8J2zOr6g0SlTxUfIaV1AyOczvB/aoV+KXxifu13HCPDF6hNomU3122cukggoRBwNwe9eY3nksq5UuKdcOVqUARnoMzPvVbNr0W117Lbu/wAQHiTe3KlOa2ywCT/aZZQhIB6SUzj5NRPXuO+JdffcVqOrXakEyQFEAke2xFRpLJWyHSCEkTKRIn3NYlvnbUn9REGQelV82guVIN3GogEhSnDOTJkH9hS1nqdw2ALTUbq2WghSSlwpg9CD0+aAXZFRCgmQDmDSTo5QDPLBjNR+4WfaLI4a8cvEnhlKG2NfXfMIEeTfN+YkjtMgwfYg+9Xv4d/ii4b1ZTVnxZp7mkXZISbhgeawsnEnAUkd5BjvXkEBtxMFQPuBMUK60pt0wrmjIIMRVi2sUtVB9QtM1LTtW05vUdMvWbu0dALbzThKCOoEdfmll+9eA/ArxW1nw/15oJu1u6LcuAXNqoEIBkesASQRvIz2Fe7eHdXsNd0S01fTX0O2t00HG1oMgz77n7pmuzkKWVSoWoUksUsuklZq8qkRUM0k4DS66SXVhUDrpByiHOtDr3qanAdyhXtzRTwzQr+9dgAF/c023Wxpzd/VTbd7GpkS3QTNbkVwVYrnmrKHRWR3FZIjBpIqMVtKqAOwTNdDekwc10FZFAHdZE471h23iuHlBlEkE774mN6AO/SlBCo5RBIPY7fvXm38SvjWxbNu8KcLXJduIKLm6QYCCRHKkjePanj8Vvik3wxw6rhzSr1I1m9BS4AfXbtEyVY2Uo4AOwzXjVu+U884XFqcdUSSpRkknrVTMM11nLxceUpy5dUVKkkgn1EnMz1rVrYuXNwlNqwpzIEwSJpx4c0V/WdQSFEhoH1ADG9XRwzw1bWbDaW2oAGSAJJ+6z8jLiudQbOH49r42VbacIaorlSG8RICT1qS8PcCXTilfnUkJIjChIq0bbTjzgpREYlQk/VOrFlCYAPN3OKzXzLGNurxNSeyt2uBLZpaQomZEgAEEU26pwLbLCuRsET1EGKtpyzWoEwZGNqb7ixUoqGZg1T9+3+jLYVGvR591zg+6suZ23SYB29qjTyVEFtxKkLBg9j916G1bTwEuBaSoHGaqjjvRfJui62nlQQSABua0MbKb0xj53j1WNoQY87KyqY7gZBHt71fP4X/ABYPC+rt8La8/wD9mvFf2VLXi2cJEAE/+MYnYTVGPtnIOSBtQ5kAlOFJ6z09q1Ffj3B5+yvl1J9QW3UutIdbMoWMFJxHatkYrzJ+EnxYuL55vgfiC4U44hs/0555Q5yAIW0Sd43HU16c5wSUjJGCO1aKWQymfYuuhJdIOdaXXvPSd6QXufirVKRFVDub0QukXKmRBnetCPbmi3etCPbmpKcAnt6bbvY05Pfqptu9jUyJa0ms5q4Ksb1zzVmDorzVgVmkuas5qAFwqTXQJmkUqrsEg43rkgLSYGCar7xy48TwRwtcXzK2zqDjZTapUQRzkmDHWIJI7A1PfMUAeaAIzNeRvxta8HuKdP0Jp4FFpbjzEjHK4ok57EJIwe9Qf0W1LuTz3xPqV1rGpv6jfXDtxdvuKW4pZKiSTsOwFNdmFi6CQghRwO4pQolYgEgTJmjOH7YL1ZPMkkyBB3ie1LMO1rti2fDjSRbWyVOIIK4JMRFW5oliPLESQRgE1CeHUIQ0hATGBj6qd6M+RyiYAEHvWHf8nPZYcRFUKOAsuQiRFLtWkZlXvkUYykOgEAkRuaJQyBIAkjpVOhobFMoAUlXNBBE0OqyZAlIIPcindxEzCZoW75koJAAxtXOIEW1u1SGXFGI+N6rDiyyS+PLiTmD2q0NbWpaSgyAM42qF6rboWpXMIE5NXVxrsXvjkuijtbtFW76hyxJIHvTE6pKVuBWUnGKnPHbHlPApiASfeoE/l4p6zNa9TclPJZacHC9D1C60zUbfUbRwtXVs6HWloJBCgQR8gxFfRjw74ia4p4O0zXWlAi4ZSpRnqAAfuc1832+UOQv0pIiSMCeteyvwV6q5eeGt7YFMps79aQQchK0BQEHYSVD6FPYzd6M7ITrZfCxggbETSC+tLn9APUYikXRvWgpnsDrpFyllikXK6RBnetCP70W71oR79VWHAJ3c023RwacrgZpsutjUyJZ52rVYa5pAaOqwKM1zWxvQAokzgb12FRg79JpFPWtyQCAmT7mo8Tos66200pxYkgEnt918/PxB6onVPE7VXUrK+R5SCVA5IUQf4Aj49q98XpT+Sfk+rlMZ6xXzo8UHl/8AUTXDdqUpxV6+Fp2CQVqKCPoj9x3qi70MUeyMOlttwhSiQYMCnHhl1TupI5RJURHfBpleQpS+ZZIB2Bwfapf4Xad+a1UOlJKUbCOs0pc2lNLGXk+i5uGkOLtm4CiuANqn2g2TpCSRO3SoRa3ibO3S3bIDjg3Ayfihr7jXji1bKdP0J1tpJgKWzE1kxXLt2eljJilfRdlgwlLY5h+1Las6jStHu778u5ci3bU5yIEqWQCQB+29UfoPinxR5iE6tpiAkEgcoEkjfG9WfoHFI1RjnSClJAJBGZ7QaOK1t2W15H3exy4W1hriTh5jVTaP2fmFSfJdEFMdaUvVWTaCXX0JSNyogAUFq+plFiosHlCASEwABjO1UlxrrF1qQLStTUASSUoURAnejSSwXWsvalk67rfC7I9WrWZVMYWN/wB6h+tX2m3Kim1uGnFEYKSCM7ZHWoNonC+hPOhzU766WSRASFEQfcfdSe34e4ZbZJ0m+eLhHqBeJIGwJB2zVrpXECqX2vPyIbxha/mGnUwOYZmqsfCkXBSoQoEgzVx65bXCXy24glMEBQMgj3qr+LbZVpqUgQV5BI3q3GfXxM7yFe45Da6lQAUoKSSMEDr7V6R/BDcOtavrLYchhaWyQk4K+aJPTImvNSFKWsBR5vkwBXoH8Huq2llrWr2TvL5t4looTIAMLMn2I3itOr8jEt9HsZzcZj5pFzMxWIgowCIEEE9RuK4JzWnBmsJr2NDO0Q5SDnWpFYM51oR7c0W71oR7c1IAN85NNl3EGnF/c02XeQakcLPNc1s7VqkxgysrK2N6AOk7Vw+sJzIB7k7V0DBB39qQuADKISoHJnb4MUHQTiO4RZ6BeXbykpQhlZJUYAPKYr59+KNulni+6UtXO+6lLzhScHnAWCfogV7o450tWo8Ov2rckqBlIcUQTBiB/vXh7xhv3LzxF4guC0m3l8NhpJB5eUBIAHaAB8ilrhmggC1qL5JJJ2ztFW54I2yHrO5gJDgIAIO01Uj6VhyBBk5I6Grr8B2FGyddGEkgT7/8NIZX4Gvg/wDNBMr7VrThm0W6U+Y9BOTAB6SenzUQ4l4s15NrZ3F5p7jjeoIdNuHXPKbUhAkkAwYIxmJmAc0/8d8LL1ZSnC4sJAkBOQT8HB+6GubHUuIOHLTROJHG3beyIFsoW6UONpB2CxAggDod9jSGLNW9vJr5aXzOq4GPR9L1DWeGrviViyhi1uPy9yWHOdaDEgkYke4J+6lHAN7d2GotNOvJeYdHM2obGNxPf2onh3R37TR0aHaLuv6e2suFpKyhCicespjnHcEbUbZaOk6s00whDKG8BKAYBO9Sy3rmPiTwqrYn5kn8QLkM6Ep23hJI3SCcxVMaNpnn3TLT7zKbi5dMqfUA20AZBJJA+pE7VenFemJuNI8mQQB8yYqB6DYrbD1uU8yZJBSBzfUilsWxVf5DeVS0x8SI+PGkP8K6rYMaZqOoL016ySv83bOAIddJIUJQQBEJgHmME5O1MGp2Go6VwfovED184i/fJLls6QlwiTCxGYIgEEbGrJv9CVclSfy7LqxsoABQHzH+1R3/AKduPXaLq5BWAZHOsrIztnYfFaFuTXoya8C6H5cgTh65uNWtD5qCpQAkkZqIeJdgkNJWEgKbnMdKuuy0e3sLQ+WyEKIg4jpVY+JbE2TygAYSCY+aSx2/2bgZy01RMSVEg5jMTE1YXgK6keJekNFaUB9wthRMFJIkGfmPuq/LbilKCYBGRR+hLdt9ds30vqtVJuBDwkeXBBJ+t/qtmG7PMuvR9HOGL26vNGtXXFS6EcqySMEGCSPeQfenVac8xVzGO0Co14UAq8PtGfdB865tkvPGCOZ1YBXvsASRHsKky8Ep2FayN8TLb2IOb0i71pZw0O71qwrB3etCPbmiXDvQr+5qRECf3NNl3sc06PkSaar39J+akcLPitVs7VqkxgysrDtWhvQBue29JOAl0KBgbEGuxua24mUCMEUSAJeFK7ZTYSSXZBAGQBuB7xXz88XLJxHizrlhzlKhqC0ZIiCTBP7ivoUscwBwShRhOAVY2HzXjb8UvCVxw34ivcU2oSWNXJUyQ2ByPpSgLEbyZSQe5pa70NY0/IqhWg3It33fLMMrIcABMY69qtrwIZCdCcxBDpERtAE0Lw9cW+uaI7dMq5lak2FLQD6BcITyqSR3IAP2D1qQ+F1umytrpggjkuV+mIgnr8Vk2WSyzB6yvFWtksUsdrTk3DKSSknsRWzYlA5E2rKo/wDIiurBxSykJMARNPNtyQecAmOtY+2VjdWFmOxsstL52yp1SQkZIAiKadAsXLrVHFgQ2FEAkbkGpZfjztPdt2ilClAgKGQDHWKrhzVuILXVU2lraWyUtEghYIUsTuFbD4q7jyghMwrFkX+kqNofMVAgZNVykHSdXcuFteZaBUKIyRnJijNS4m1++Y/IW9ott4ghRcMoTjc9xUW0dHEl/qarHUrlldqCZWlMfQG/3XIrnZB7YaSxrrSLW5Ybu7ckpcAIKTiOu1Cps22UELKiB1NOWmqbsdPatULKkoGCd5oHVLluCowZ7HauOkk4lRn1N1ISpIIKQDAjNVH4iJC7S4SkZLZMfvU94jv0tlQSpIkEYqv+IHvzJXCpBSQT2xV+N7M7OaJjRXNjo7zqkkBCvMBMqMAD39qK0y3SxdIJY8xhUoAVkIKvSknqDzETPSpzb2NywwyC3cJU6ykW3OnklJBBUCRnfBFLI4dsrzVbbSbUqcd85hbykAHywHQjlk7HzHII3/tHpyzp0yzNoxMpVrpPWfhWongDSEkAFDKQRBkGAoj4kn+KkyzJM0weHrZb0S4QI8tF28lsdgFwB9CKf11u1/iebf2IOdaGdO9Eu9aFc3qwqB3OtDO0S51oV/epEQJ/9Rpsu45DmnF8wommq8Jg1IC0qw7VqspMvMrKytHagDY3rfMa4FdDegDsDqAkqGxO01X3jrw5baxwtbXT9sy83pl0H3UPA8qmCkockjIACyokbBE9KsFJG05rHOQoKFJS5zJIKVRBHX6qDE1bR4ot+Hm+DuJ1aSlxxyy1MoXaIeALlusAEAnYgScjCoBBJFTDTkLtnF87bwdX61lWEEgx6R3pv/EzqaOHlWnDOnKZeBULmyfUSX7FAUChqf8ADmQDkAwcATDuAvErVtc4gstH1oW7qVJKWnktwvmIwD3kwKycmmYncHo8HK+MI8ly2F6EEqCoGMU6K1VDYSkqknMztUfQySBynBE/R61zc2rpt1BCyVQSD1FYsr8tHpkb47JC7rbaWygEA9yaDCmnFm4Xyg78ysVXGsWfE7RTdMOslMmGlAyI2M9/aiNAY1W8fSbrU0suSICmyQDNMLXBxN2TqSylO6ehCnC+yAREggme1Mjt1YhavKfZDkzggH9qE/8ATaliXNSaUsmecAiPeKiHEPDzjj5Dd7cvqAgFtkATPc1dxhS58XhHIlr/ABCGnQ2HAY3zvQN7q5IyqScjNRHh7h++RdOPXeoPqjAaUBt80/6jbtoQ2kGSBE1VYvQmrNsZNTeeuX1FRMUx3a2GVB++cDdulQDhI2BOScGpK6hKGlOKgxVd+Jd+hqyRZIP9x5wKIBzyjIqWPG50JZj/AG43JYl1qDXEd9aabpBvNUvFttNslRPKygJIQCoyQAJgACRJG01aHglwTa6VbpuTdtXFs04bi5vFJH994JAASdi22kkAgwSsxISDUW/C5p+icQcLNrdb81enczFxbhzkbQSQQtQkLWFAdVhGACnci/E2du9aFhl1ardpshCY5UwNkJQAARJiSJ2g7VvY1MLGzy2Xktc2oFODmVNaKXVMlk3Vy9c8h3AcWVAHsQIxTm51rTKkJZbSOQAJEAfxW3YzmnlUz5B1nNDvfqpdzekHetWFYO71oN/c0U71oV2IOakRALg5NNd5+g05v4UTTVeyUnFAFqnatVs7VqlS8ytHasmsO1AGq2BkVoVs7UAdIB5oAzPWo9xnxDa6PZr53Cpxba+RtpJU4oASSAMkCQSRtIp7dcSknJIMSJjFVMX2Na1/UNZ1G+SdMIQlBKgiLdCpbQnaPNWS6SBsECBBNQckUL4qvXGs6RZa61od0jylXKb164SgFTrhIKQAZlA2JhUESADVL2b67G+ZvEFxpTSwttQkHBkH+KuPxc4idv2ru2YT+Us13Cxa2SSP7aC3ClqjrAJjYEmDIiqo1plFnbuWKmouEOgkkDCCiQPs0pZ2PVSywekuBOJrTX9Ft9QZUApYHnJ/wLOCCOgmCPapD+ZbC4CgQeleWPD/AIlvdA1xpDbh/LPrCHEE4zAkfE1flpqyFGVBQUADBxmsHJpmt9nrPH5UWVcGJHqVvJCgT6s/HvWrJi7bCC0AT0PKJnpQKdU81KUyCRmZ2p+0q4QtKVOLCQIzsKqH1n+CDiNdWCoEgbSQBigbm1veRSn3BCf8MSamJuLTygnmyRkg1F9fvmWuYNuSM471byBoaf2MTTSE86ubOZNMOrXQbeKSuROM7VvUtXS1zhKoBk71FL7VA+smSQDv3rv5CrWcR1vdQSWiFGBsRO9U3xTfO3+tPvObJPKgdAOtWMtTjoClH0jIqqr5fNeuqJiXFZ+DTmKhjeRslvZMPCjjjUOBeJm9Rs3i5bOQi6t5gPIkECO4PqB7iOte6+G9eseI+HmtQ0l1Rbfb5W0giUmc/wCQivnMygkgKJz02n7O3zV4fhy8QHOHtVc0fUXVOWDi0pClE8qCSBzEdIJHtWrRZrqTEur5R0exmLpFy0jlSQCCQJEgTgH42+67cjGelMVq7/Tr1boH/tHvWANm1kiQJ3BB+qeuYLQAM4kEbEU+ojJw4aGdIE5pddDP5JqZyRF2IOaCeop0gDehXYg5oIANxEnNNl5HKZpwf/Uaa70ykj3oIlr1o7Vh2rVLl5lZWHauTtQB0DkV1BOBudqTOAJMfNYVFPcHvnH8j/MUAQ3xV1oafoqrFiHLrUUqZbRzQQgiVknoADE9CRXn7iTiiy8ktXKWX1h4uJsUnJ5QQOZEzygpAjAMK9IyaK8Z+KdV1PWXLvRnlts6gr+n2IbEulptcKWBACQpZIBIkkDIGCzJ4JTp9ppzwdSw/qRWlKm18z1xK0JC0qJxAUV4OQJGDNLvLSMpELG5Iff3ultv3d1cP3Fzqb6086mkBUhQCioJ2AgBIjMCetVxqYU68XFBQJIHMtUzAOQevb2r0R4lPcL6SwNOF/a6c3YcgLNsyDdOrJAOQIAgxKiRI2J9Q8/36/z2oum3BWhtJTbpSOSBJOZ2Ek4OZiqHmIGKtsNiShp5KkTzoIJG+xr0EGBcWLLoMFSAQUnuBFUla8P3j6ySlaWkLAWsoIlR2AByT71fXC6A5pDLZMhLYBJHYVnZk7g2/Fq3y2MPn39g+SlRUkGc08WXFjTYIeCgcAg7U53WloUnmCQQRn4prf0RlZPoAkdqzucGxwdRS540bAKkrA6AdaZdT4qbfyklSj0ANFr4fak8qQT70irQkIMkJM+1diFONNhGbp66vVlSgUpJxBrdpZqJSogmOhHWpMjS0zyhO3SKNa0tptuVJIxJEZq6XiF6KopmZ3JF7tsttDYGMdqqRaErdVMhQWebp16VdGuNwOVIASDIneq71vQ1ecq4sUqDxklIE846wKaxG67MvyVYxNMNOXbZbSQ3GQoyTG+2w96kfB1ldL1hxpi4NqH7VfqImUyJBG4yCJ71HtLbeF+UJhhTgUCpZ5EAEQZJ6fFWXwTc21hr+pXV4p0+Vo7tvagKmXFCEjbJOSBuSRG9aCTGzGaJPT3gzrL+t+HGjOXaw+5yll0qIglBKSe4n/SpqhP5RYAktrIEEyQSYH1NV54EWirPgjTkF0GWApYIghbkOEgexI+jU71N8Ku7W2SohTjgWQRkBBBE/MVqJ+Ig/wCQ4rjNDu7GtefK+VQOMH2rh5xuMmAdiTg1MrB39z8UK7RL28jNCvmRXTjAF0rJpovD6SOtOtyd6Z71W9BEtysO1Ydq5JpctN1lc1pS0pBJwKhbbXUvJp0TVWb8YMc9QjGO9NHFNym04evHhAUUFCEqG6yCEjPcwKcV3IRkCB8TQF4lu7cZ/MMlRZWVtpkQFkdZwR2JxNYOV9SYVEaidmlR4rIs7mNHk/Vbd2w46uGX9TubtVsy8GVkZFw8kqJBGQkgrIAwFA5yKlviJqC+JLW0stAtTZW7DIQl64ZIWjKSFISDggoQJ3icUz8a3eor/EqdPfShm1dHIUNghLiA2pTalTlRG0mYnEVYv9MR6TypHwKhb5OZrV0/Zq4Hi67ZaWn0Vdp/BKF6cba7QXQ6oLuHFgeY+o5la5kgEbdOtZc8JW1u0EsWqWwMAAD+T1q20aenkgI3Hahb3TQoSEgR1jakpyneezbXBrSPjBUStDbaeZbShQSG1LOZKjPKCR8IkfJp64aAalpQ9ORBp/1jTVJu2FhJKChbe8EEEKAj2HN+9NxtCy/IEJIkkVc78lFqquLj+i2Q62kBAAAxmkH9OBcEg/QonSXh5YwSQIzTksJXBHpxv2rPZjVVeiOO6eQTy8vwd6HdsCRkp94Oakztu4oTKVJHXY0gbZQV6myfqjnJLgpHW7BLeUpknqRSN02cgjbtT7ctqQSYwOlNd56iYBGKtVil4iCJatbFZJ5QPam+zsC1csOeWlS0OAgRvkYqWptfNcPMkmPalVaaocp5YJPMCSBt/wDlNVWcZEL6lmOyAXvDjZvHCGklBUQAQCO/2KMsuFUMOMXFrzsOsLDjSkkgpUDIOAQcgHMgVPho6QlskDmVkyJFGMaclCBIAjAonJaJ6IphLK/KBk4P4l4k4aum0uuKutPbkhtCg2pBM5CoV0wZT0FTzR/Eq1ebuFN8Lam6+kgLhbaznrJIJ2OAkExgVHjpySDiPeKZ7bTkXfiXoFmj0hoOXboCiIhPpmNxzEDPUxV/+WsqTf8ADPy/EVLENH7LP0vXNX4gUQyy7ZAgSX2S2sJIMAIJ5hIBhW3WDFSBLYsR/dSCTEq5QCO8mc0AltSHFKaUEyAAoESIUY/YH+a5urt9y1cZuFqcCwUhQ3GImqsP6vxnnjbGjPyPB2qu1HorKFqSSCCAR7Ug8rBPTvQKL1ogEuK5gkJAIiYokrCmgUkEHcgyK9NjZ9GRG6m2Y1uPbX+UAd0rJpovVelR2pyulTMUzX6jykU4LlyHatEiDmsO1DPuEnlGP9ay8/PTBpmx/wDwdxcZsizjBtbyVEpTJjcjNcKKTIwSdgAZmuEpTGJAOSa7bcAJCE8xHXevlfkvMX5rTynUHsMbBrxl/wCzhK5JbU2o9MmkHQUmC2ZBmZ3A6Uvc4hQIB7GkHXgtBHolGTWM0sPqU54w6K2x4pcJ8QpQEBal2zxA/UoIWASfcED6qS2zYkKV+k96K8XdPd1HgxV4w2FXGmvJvGynJhJBIA7wT+1NGnXv53Tba5aIKXW0kQZG0n+Aa9j4+6bsZd/orxJhLmT+j0W0BQiAIrh5lBQZG52oEXLhHqkRjNb89ShEnFOD4z8RWylWhLIBUghaSf8AEDkH2IxQV7as3Nkl9sZIAKRgA9YNPt0graUnlkkE1Gm0Xlu+5b8qikmUyDB+KvVvjoWZOL7ELBDrDpTEg4EmnxlKltgFJB7kUFbtqklSQFHBnEU8WTZ5QDkCl2nfY0i8QchbQymZ2rSEOFKQsgkTJAOZ2p2UyleMYGK020EiCAQOtQLeIx3jHKglQJn2phuUBTpAEfNTO7a8xsjl/ao/eWXrJSmT8VYraKXXsGsLJIIWqD1z1rd6UKvGLVCkQckSJI6kDtg/vW0IuG0la+YAbACkLFpxx5T6yqDIbJGR3+qZhutili7nQ8tNtEpAKcCASaIcaQEZUkYoJiUjKpPxXTrqyIGYqBY3SnYCEAyAQBTZ4c2beoeIGuaqoQ3ZMt2bZnAWfWv7ECR7il795u3sn7hx0pDbZWoHAAAJ36U5+DWn3DHArd+8lQf1N5d44VCDC5KQZ9oFZ3lrvs4kz/RRv9t6p/CXIaTmVKicY3pF1lEKkqHyRRbbBUCVqUAM/pAFIXLTMgFX0TXikaF/Y4/obXWQskCSO9JAuWqSpLgSkbpVNFLbb5iEgR7Kpk1tSk3DTKEklBlQBmafxsy3HnnWws+Mty6aBxYv27oKSBCxgg7n3FN2oGQTOJpG8bdbCX2lBpUZE0iq7Td2hdRg7EdiK+nfT3nYz0+0/wCUHj/J+ObHbkvovJwjlkmB1NI20ONSRIBOetdOnmkDYUjYEqQ62EkQdq8h9T5zX5X24npTa8RjRXRzn2YpH90lRgjAGwikkuHzSEzG0REmsvXvKQknBU4Ex3E1ySEvKAEggGCYryUzOzbhdxsIABBKgBG8GSKEedb88JUJTsTIEzSz7p8lQJECMJ6fdcOMNKQAQQSJJrpyAN22ZfbftlKUGH0FC0KGSCIMfvVX8GWy9OuNT4aeJKtNfKWSdywoyg/yRVr+WQSWzKkkEHvFQfxFtf6Prun8XW6SLVYFpfEHAbJHlrPwcSa2/CZHB/tT+yi7dbLZ/Dpy3wIA+qSDXKrAzTuUJcAWlQUCAQR2In96SUz6sgfdeiaJNFGho5ACWSQQ4IJ2NN+q2Ky6m5ZQSpogkdwN496e1tLC0lCkgSJBB2pUjEcoPsakjcTrrDLoYrZpq7YQ6GyncKyMH/hFFC2LafQZArHbddpdF5oEtKwpMYHQn+BRLTrT7KXGFpcSoAgpIIIPUEdK66b7U5VZ+mEW0KETFdlCggkAT0pSBjsf+f6isdkJAiqRkFKCf1H6ikn2G+XmITEZNErHYgHpP8Umt9lJUApKnBEIJEn3A64Kf5q1V5FNjwow6lbqfLdrb4Uoy53A7+1EIskMoCUowBAJP70db2YaKlKKlurMlURvsKUU3IKSJFSZ4iNC6pO+UjWbYASNzXH5dWTgDvTiplJMRHvNJvpDDZUtQSkAkqOwHepL2D7giHGiH7pu04dsxFzqzwYSeoRIKyfhMj2mrXZtU2VqzaW4aDTCA2hO8JAxt7GPqq+8MrM63r17xndNnyI/KaYlRj0g/wBxwfJIAI6A9qsN0yDCUiN5dNeX89kfctilf0LYkcmmz+9Ca5IHrTHsqhH2kcpKnD8AzRTK1gnlPMOySCa4fCyCoh0iNiYrBG5AUWzcFXKsjrFMbqfM4hW2k8qUAFQJyBjpUjClZSpCo/8As9A+6Y7Vv/v98RBVCfcAECM9dv4qUN0WVp+zWvcrVk4oJyEnJwRionYPqaWtlZVyryMYnpUh4rcP5UNJUXHFqAI9qit+VstF0YiDgSMVr+FypxL1eDL8jTGRXKno8FbWSJCqFt1Jb1EgE/3ATBwKNlSQmOUpHeg9RKULbfbTCkHIOAR1pG+xrXl2/ZOpFSISAbW3ASlEcsAmD3pUJbKmXyUgFPfeKF1XLrQJACyCSr/Ke1LaeEKs2kqIBQoiAJM+1Kr241PVcC2pPoTakIgFRABIwa2sBSkgkEQTj4oa+gLZQG91SCrJPxRKBzOBQWQcCCRXd7kjK/EzkUh1JQogEZBIM0nqenWmq6a7p96nzWLhsoUgkAEEECPcE125zpKIJMHtRCOcFOI5dj71KuWRtqVuvJdSVboT9xomrucI6uv+41K9PfJ/+SzMjJ3I7DtUkPTrORHWnTjfhm14n0v8pcLUw+0ea2uGjC2VdCCMwDBIqvzrOp8NPjS+MLdTcqCGdRQmGXQMCSNj8wO9exxM1MmvW/kLU3zS3F/RKVZPvvFaQJJkfVaZdZeZC2XEuNqAKVpIII9iN6wEJV1prRpo8P3EnTgCkn0kEDGaEXblsQklKAIISAqADAgGJ3mjA4mcjEwa7SJJMfHtViNxOzCsNSL5lkqS8VNQCeZcIBAmTAVGwFEKSkFPMCCo8oABmYBgDvBBjsQetEO2jLqeRSUqSQQeYAzP+lC3HDl49ac6dNdNuSD54T6E+oEkQJBhCUz2HvVtdcPJTbe1URGxvW87cltuwQFyMuk4EAjHuKJtNORbkr5lKdP6lKzPsP2H70eyw0w0lLaUpRuAE7dhPecmtrGJGZ7VGZ11BNF32wMtMDoKEXmR1miXiInOdvem3Vb+zsbY3N9ctMMoyVKUAMdPf4qOpaDr2KsfKRRRIPNnB6bg/wC9Ra5TecZ6m5w/o6inS2lganqAkIAnLSDsSRIkbE0Zp1prvGhCLIPaNogkO3S0FLz4OIaBGARiT3qwNH0uy0XS2tM0y0Sxbsg8uY5idyZySe5+qys/yaYy8U7b+CEs+S2o6X+nFtYWNhYs6faNNt2zKeRpAGAAMn3JOTWiw105QOwQDRN5KFtlKUxzESD3+KHX5qpEwJ6c0/WK8hLs8y0+zRWEVNKIONAkgNrEdQkg0lKORQKFGAd5/wB6LKXFAJLqyNoAVJ/ignkuocJKUuIiOVYgj3AO9E9keUGgq3SVc3Knbfamm4dYt9Ru3ByFTraAAOpAp0IUqAhrlPTJGfqaiGtKVfa+qwaT5aWGg4+rzCfLRMpEnqT9xXaklpJc5hdGcQ3CUWzSwvzFlwmIwPuo/rYX+UDYUCpQmAZp/OmLuVourokpQIaZGNup+aC1ZltlC1uQnsIn6plGVJ6FnWT/2Q==" alt="Dr Vani Lakshmi R">
+    </div>
+    <div class="bio-text">
+      <p class="lead">Statistics gave me a seat at tables I would never otherwise have reached: reproductive medicine, neonatal pathology, tribal health, climate change and cultural heritage, Raman spectroscopy of erythrocytes, fibromyalgia sleep profiles. I did not plan a career that crosses this many boundaries. It happened because I kept saying yes to people whose questions were more interesting than my own comfort with a method.</p>
+      <p>The foundation was mathematical: a doctorate on gamma distribution theory and supervised learning at Pondicherry University, where I developed heuristic approaches for handling skewed data that intersect with what the world now calls machine learning. An MBA in Quality Management and triple ISO Lead Auditor credentialing (9001, 14001, 45001) added systems thinking. Six years as faculty and Head of Department (in-charge) at Manipal Academy of Higher Education built the teaching, mentoring, and administrative depth.</p>
+      <p>In November 2025, I moved from academia to industry, joining <strong>Eli Lilly and Company, Bengaluru</strong>, as Associate Advisor, Statistics (Oncology). The rigour is the same but the stakes feel closer, the timelines are harder, and the work has a directness that academia sometimes lacks. I contribute to Phase II and III clinical trials, statistical analysis plans, regulatory submissions under FDA and EU frameworks, and industry-academia collaborations with universities in India.</p>
+      <p>Alongside research and practice, I have co-authored over <strong>150 collaborative Scopus-indexed papers</strong>, eight edited volumes (including a six-language public health series), a book chapter, and ten registered copyrights. I have led evidence synthesis through more than thirty PROSPERO-registered systematic reviews, and I serve as Statistical Reviewer for the Journal of Advanced Nursing, F1000, Frontiers, and BMC journals. As a teacher I have delivered more than fifty workshops across fifteen cities in India, and as a mentor I have supervised over a hundred master's theses and co-guided eight doctoral scholars.</p>
+    </div>
+  </div>
+  <div class="numbers-row">
+    <div class="num-cell"><div class="num-val">163</div><div class="num-lbl">Publications</div></div>
+    <div class="num-cell"><div class="num-val">512</div><div class="num-lbl">Citations</div></div>
+    <div class="num-cell"><div class="num-val">12</div><div class="num-lbl">h-index</div></div>
+    <div class="num-cell"><div class="num-val">16</div><div class="num-lbl">i10-index</div></div>
+    <div class="num-cell"><div class="num-val">30+</div><div class="num-lbl">PROSPERO protocols</div></div>
+    <div class="num-cell"><div class="num-val">8</div><div class="num-lbl">Edited volumes</div></div>
+    <div class="num-cell"><div class="num-val">10+</div><div class="num-lbl">Copyrights</div></div>
+    <div class="num-cell"><div class="num-val">100+</div><div class="num-lbl">Theses supervised</div></div>
+  </div>
+  <div class="subsection">
+    <div class="eyebrow">Education</div>
+    <h3>Where I learned what I know.</h3>
+  </div>
+  <div class="edu-list">
+    <div class="edu-item">
+      <div class="edu-year">2026</div>
+      <div><div class="edu-title">ePG in Advanced Epidemiology<span class="edu-tag pursuing">Pursuing</span></div><div class="edu-meta">Public Health Foundation of India</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2025</div>
+      <div><div class="edu-title">ePG in Health Economics, Financing &amp; Policy<span class="edu-tag">Grade A</span></div><div class="edu-meta">Public Health Foundation of India</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2025</div>
+      <div><div class="edu-title">Diploma in Applied Psychology</div><div class="edu-meta">Academy of Modern Applied Psychology</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2023</div>
+      <div><div class="edu-title">Diploma in Mental Health &amp; Wellness · Mindfulness Practitioner Levels I–III</div><div class="edu-meta">Academy of Modern Applied Psychology</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2022</div>
+      <div><div class="edu-title">MBA, Quality Management<span class="edu-tag">CGPA 9.0</span></div><div class="edu-meta">Birla Institute of Technology and Science, Pilani</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2016</div>
+      <div><div class="edu-title">PhD, Statistics</div><div class="edu-meta">Pondicherry University · Gamma Mixture Models &amp; Supervised Learning</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2012</div>
+      <div><div class="edu-title">MSc, Statistics<span class="edu-tag">96.4% · Gold Medallist</span></div><div class="edu-meta">Loyola College (Autonomous), University of Madras</div></div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2010</div>
+      <div><div class="edu-title">BSc, Computer Applications<span class="edu-tag">98.3% · University Gold Medalist</span></div><div class="edu-meta">Sacred Heart College, Mahatma Gandhi University · Triple Major: Mathematics, Statistics, Computer Science</div></div>
+    </div>
+  </div>
+  <div class="subsection">
+    <div class="eyebrow">Credentials</div>
+    <h3>Certifications and professional training.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Triple ISO Lead Auditor: ISO 9001, 14001, 45001</span><span class="meta">CQI/IRCA · TÜV SÜD &amp; TÜV Rheinland · Valid till 2027 to 2029</span></li>
+    <li><span class="label">Lean Six Sigma Black Belt</span><span class="meta">Anexas Europe · 2021</span></li>
+    <li><span class="label">Scrum Professional Certification</span><span class="meta">Coursera · 2022</span></li>
+    <li><span class="label">UGC NET: Population Studies &amp; Management Studies</span><span class="meta">Government of India · 2019, 2023</span></li>
+    <li><span class="label">Google Data Analytics Professional Certificate</span><span class="meta">Google via Coursera</span></li>
+    <li><span class="label">Python Certification</span><span class="meta">Indian Statistical Institute, Bengaluru · 2019</span></li>
+    <li><span class="label">Good Clinical Practice (GCP)</span><span class="meta">Novartis via Coursera · 2026</span></li>
+    <li><span class="label">Generative AI Learning Paths</span><span class="meta">Microsoft &amp; LinkedIn · 2025–2026</span></li>
+    <li><span class="label">Advanced HTA Certification</span><span class="meta">PGIMER Chandigarh · 2025</span></li>
+    <li><span class="label">Foundations in Economic Evaluation</span><span class="meta">The George Institute · 2024</span></li>
+    <li><span class="label">Environment Impact Assessment</span><span class="meta">Centre for Science and Environment, New Delhi · 2025</span></li>
+    <li><span class="label">RAKSHAKA: Faculty Training to Support Student Well-being</span><span class="meta">Manipal College of Health Professions · 2023</span></li>
+    <li><span class="label">Cybersecurity, Professional Ethics, Information Security</span><span class="meta">ISAC · 2024</span></li>
+  </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="panel" id="experience">
+  <div class="eyebrow">Experience</div>
+  <h2 class="h-section">Ten years of practice.</h2>
+  <p class="h-sub">Across academia, industry, and independent consulting.</p>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <div class="exp-org">Eli Lilly and Company<span class="current-pip">Current</span></div>
+      <div class="exp-period">11/2025 to present</div>
+    </div>
+    <div class="exp-role">Associate Advisor, Statistics (Oncology) · Global Statistical Sciences · Bengaluru</div>
+    <ul class="exp-list">
+      <li>Supporting Phase II and III oncology clinical trials with engagement across Protocols, Statistical Analysis Plans (SAP), Tables, Figures, and Listings (TFL) reviews, ADaM and SDTM reviews, Blinding and Unblinding Plan (BUP), List of Analyses (LoA), and Data Monitoring Committee (DMC) preparations.</li>
+      <li>Contributing to regulatory requirements across multiple countries for ongoing clinical trials in oncology.</li>
+      <li>Delivering sessions on Causal Inference and Non-Proportional Hazards Models at Lilly–MAHE and Lilly–University of Calcutta academic collaborations (February 2026).</li>
+      <li>Ranked among the top quartile of learners at Lilly for 2025.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <div class="exp-org">Manipal Academy of Higher Education</div>
+      <div class="exp-period">07/2019 to 10/2025</div>
+    </div>
+    <div class="exp-role">Assistant Professor (Senior Scale) · Prasanna School of Public Health · Manipal</div>
+    <ul class="exp-list">
+      <li>Head of Department (In-charge), Department of Health Technology and Informatics, PSPH (September 2024 to October 2025).</li>
+      <li>Quality Coordinator, PSPH (April 2024 to October 2025).</li>
+      <li>Co-coordinator, Centre for Digital Health, Applied Research and Technology, PSPH (March 2025 to October 2025).</li>
+      <li>Coordinator, Placement and Industry Collaborations, Department of Data Science (now Department of Applied Statistics and Data Science) (August 2019 to September 2024). Led to 100% placements for MSc Biostatistics, MSc Data Science, and MSc Digital Epidemiology.</li>
+      <li>Social Media and Editorial Coordinator, PSPH (2020–2024). Revamped social media via Zoho Social; coordinated all editorial activity contributing to visibility and student retention during COVID-19.</li>
+      <li>Member, MAHE Committee for Sustainability (2023–2024); Member, SDG 17, THE Ranking Team for MAHE (2023–2024); Core Member, Strategic Vision 2030 for PSPH.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <div class="exp-org">Independent Practice</div>
+      <div class="exp-period">2010 to 2014 · 2016 to 2019</div>
+    </div>
+    <div class="exp-role">Freelance Statistical Consultant</div>
+    <ul class="exp-list">
+      <li>Supported Contract Research Organisations (CROs) and ongoing research grants from protocol design through statistical analysis to publication.</li>
+      <li>Engagements spanned biomedical research, clinical studies, public-health investigations, and academic theses across disciplines.</li>
+      <li>Built early consulting practice between doctoral coursework and full-time academic appointment, returning to it briefly between MAHE roles.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESEARCH (placeholder - publications etc.) -->
+<section class="panel" id="research">
+  <div class="eyebrow">Research</div>
+  <h2 class="h-section">Methodology, evidence, translation.</h2>
+  <p class="h-sub">Publications, books, protocols, and grants.</p>
+
+  <p style="font-style:italic; color:var(--ink-mute); font-size:15px; margin-bottom:40px; border-top:2px solid var(--ink); padding-top:24px;">One hundred and twenty-five papers indexed here, spanning 2014 to 2026. Full bibliometric details and Scholar metrics are on the <a href="#" onclick="document.querySelector('[data-tab=about]').click(); return false;">About</a> page.</p>
+
+  <div class="subsection">
+    <div class="eyebrow">Publications · 2014 to 2026</div>
+    <h3>One hundred and twenty-five papers, by year.</h3>
+  </div>
+
+  <div class="pub-years" id="pubYears">
+    <!-- Year tabs injected by JS -->
+  </div>
+
+  <div class="pub-list" id="pubList">
+    <!-- Publications injected by JS -->
+  </div>
+
+  <div class="subsection">
+    <div class="eyebrow">Books &amp; Edited Volumes</div>
+    <h3>Eight volumes, including a six-language public-health series.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Are You Eligible for Free Healthcare?</span><span class="meta">Manipal Universal Press · 2024 · English + 5 Indian languages</span></li>
+    <li><span class="label">Climate Change and Public Health: Governance and Challenges</span><span class="meta">Manipal Universal Press · 2024 · Co-author, Chapter 15</span></li>
+    <li><span class="label">Six additional edited volumes in public health and biostatistics</span><span class="meta">Various publishers · 2020 to 2024</span></li>
+  </ul>
+
+  <div class="subsection">
+    <div class="eyebrow">Tools and Instruments</div>
+    <h3>Questionnaires, scales, and assessment tools I have helped build.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Manipal Inventory of Academic Stress (MIAS)</span><span class="meta">Registered copyright</span></li>
+    <li><span class="label">Manipal Inventory of Depression, Anxiety and Stress (MIDAS)</span><span class="meta">Registered copyright</span></li>
+    <li><span class="label">Death Literacy and End-of-life Awareness Preparedness questionnaire</span><span class="meta">Registered copyright</span></li>
+    <li><span class="label">Uterine Fibroid Quality of Life and Health-Related Lifestyle (UF-QLHRL) questionnaire</span><span class="meta">Developed and validated · 2025</span></li>
+    <li><span class="label">Social-Emotional Rating Scale for Autism Spectrum Disorder (SERA)</span><span class="meta">Developed and validated in Indian sample · 2023</span></li>
+    <li><span class="label">Speech-Language Pathology Occupational Stress Questionnaire (SLP-OSQ)</span><span class="meta">Developed and validated · 2022</span></li>
+    <li><span class="label">Additional cross-cultural adaptations and validations</span><span class="meta">Autism Family Experience Questionnaire, CARES screening tool in Kannada, and others · 10 registered copyrights in total</span></li>
+  </ul>
+
+  <div class="subsection">
+    <div class="eyebrow">Evidence Synthesis Protocols</div>
+    <h3>Thirty-plus systematic review protocols registered on PROSPERO and OSF.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Hypnosis in chronic low back pain: systematic review and meta-analysis of RCTs</span><span class="meta">PROSPERO · 2026</span></li>
+    <li><span class="label">Mental health literacy interventions for young adults: systematic review</span><span class="meta">PROSPERO · 2026</span></li>
+    <li><span class="label">Mobile health interventions on cardiovascular health among young adults</span><span class="meta">PROSPERO · 2025</span></li>
+    <li><span class="label">Stair climbing on obesity and insulin resistance among adults</span><span class="meta">PROSPERO · 2025</span></li>
+    <li><span class="label">Cultural humility training for healthcare students: systematic review</span><span class="meta">PROSPERO · 2024</span></li>
+    <li><span class="label">Predictors of return to work after stroke: systematic review</span><span class="meta">PROSPERO · 2024</span></li>
+    <li><span class="label">Additional 24+ protocols spanning public health, clinical medicine, and nursing</span><span class="meta">PROSPERO and OSF · 2019 to 2025</span></li>
+  </ul>
+
+  <div class="subsection">
+    <div class="eyebrow">Grants</div>
+    <h3>Co-investigator on funded research.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">ICMR Grant</span><span class="meta">Rs. 23,00,000</span></li>
+    <li><span class="label">DHR Grant</span><span class="meta">Rs. 10,00,000</span></li>
+    <li><span class="label">MAHE Intramural Grant</span><span class="meta">Rs. 30,00,000</span></li>
+    <li><span class="label">ICMR pipeline</span><span class="meta">2 ongoing · 2 with technical approval · 23 submitted</span></li>
+  </ul>
+
+  <div class="subsection">
+    <div class="eyebrow">Reviewer Roles</div>
+    <h3>Statistical reviewer for peer-reviewed journals.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Statistical Reviewer · Journal of Advanced Nursing</span><span class="meta">Wiley · April 2025 onwards</span></li>
+    <li><span class="label">Statistical Reviewer · F1000 / Frontiers / BMC journals</span><span class="meta">2023 onwards</span></li>
+    <li><span class="label">Reviewer · PLOS One, Hindawi, Annals of Operations Research</span><span class="meta">Various</span></li>
+  </ul>
+</section>
+
+<!-- TEACHING -->
+<section class="panel" id="teaching">
+  <div class="eyebrow">Teaching</div>
+  <h2 class="h-section">A decade of classrooms and workshops.</h2>
+  <p class="h-sub">Across MSc, MBBS, MPH, MHA, and nursing programmes, and beyond MAHE.</p>
+
+  <div class="tch-block">
+    <div class="eyebrow">Programmes</div>
+    <h3 style="font-family:'Fraunces',serif;font-size:24px;margin:8px 0 16px;">Faculty for postgraduate and professional programmes.</h3>
+    <p>MSc (Biostatistics), MSc (Data Science), MSc (Digital Epidemiology), MSc (Nursing), MSc (by Research in Biotherapeutics), MPH, MHA, Data Analytics for MBBS Students, and PG students at the Manipal Institute of Regenerative Medicine, Bengaluru.</p>
+    <p>Beyond delivering courses, I have designed curricula and certificate programmes from scratch, including two bi-annual certificate courses in biostatistics, epidemiology, and research methodology, and contributed to shaping the MSc Digital Epidemiology and MSc Health Technology Assessments programmes at MAHE when no comparable template existed in the country.</p>
+  </div>
+
+  <div class="tch-block">
+    <div class="eyebrow">Courses Taught</div>
+    <h3 style="font-family:'Fraunces',serif;font-size:24px;margin:8px 0 16px;">Twenty-plus subjects across statistics, data science, and informatics.</h3>
+    <div class="course-list">
+      <span class="course-pill">Applied Multivariate Analysis</span>
+      <span class="course-pill">Design of Experiments</span>
+      <span class="course-pill">Statistical Inference</span>
+      <span class="course-pill">Categorical Data Analysis</span>
+      <span class="course-pill">Generalized Linear Models</span>
+      <span class="course-pill">Causal Inference</span>
+      <span class="course-pill">Survival &amp; Non-Proportional Hazards Models</span>
+      <span class="course-pill">Biostatistics</span>
+      <span class="course-pill">Research Methodology</span>
+      <span class="course-pill">Machine Learning</span>
+      <span class="course-pill">Infectious Disease Modelling</span>
+      <span class="course-pill">Health Informatics</span>
+      <span class="course-pill">Digital Health Infrastructure</span>
+      <span class="course-pill">Data Engineering</span>
+      <span class="course-pill">Programming using R / Python</span>
+      <span class="course-pill">Health Technology Assessment</span>
+      <span class="course-pill">Six Sigma: Essential Concepts</span>
+      <span class="course-pill">Effective Communication for Data Science</span>
+      <span class="course-pill">Soft Skills for Career Development</span>
+      <span class="course-pill">Nursing Research and Statistics</span>
+    </div>
+  </div>
+
+  <div class="tch-block">
+    <div class="eyebrow">Workshops &amp; Invited Lectures</div>
+    <h3 style="font-family:'Fraunces',serif;font-size:24px;margin:8px 0 16px;">80+ engagements across 15+ Indian cities since 2019.</h3>
+    <div class="workshop-cities">
+      <div class="city-tile"><div class="city-name">Manipal</div><div class="city-count">Home base</div></div>
+      <div class="city-tile"><div class="city-name">Bengaluru</div><div class="city-count">Multiple workshops</div></div>
+      <div class="city-tile"><div class="city-name">Calcutta</div><div class="city-count">Causal inference, 2026</div></div>
+      <div class="city-tile"><div class="city-name">Hyderabad</div><div class="city-count">BITS Pilani Hyderabad</div></div>
+      <div class="city-tile"><div class="city-name">Chennai</div><div class="city-count">Multiple invited talks</div></div>
+      <div class="city-tile"><div class="city-name">Goa</div><div class="city-count">Goa IPA</div></div>
+      <div class="city-tile"><div class="city-name">Calicut</div><div class="city-count">Providence College</div></div>
+      <div class="city-tile"><div class="city-name">Mangalore</div><div class="city-count">Yenepoya University</div></div>
+      <div class="city-tile"><div class="city-name">Puducherry</div><div class="city-count">Pondicherry University</div></div>
+      <div class="city-tile"><div class="city-name">Mumbai</div><div class="city-count">Invited lectures</div></div>
+      <div class="city-tile"><div class="city-name">Delhi NCR</div><div class="city-count">Invited lectures</div></div>
+      <div class="city-tile"><div class="city-name">Pune</div><div class="city-count">Invited lectures</div></div>
+      <div class="city-tile"><div class="city-name">Hubli</div><div class="city-count">Faculty development</div></div>
+      <div class="city-tile"><div class="city-name">Mysuru</div><div class="city-count">Faculty development</div></div>
+      <div class="city-tile"><div class="city-name">Kochi</div><div class="city-count">Faculty development</div></div>
+    </div>
+  </div>
+
+  <div class="tch-block">
+    <div class="eyebrow">Mentorship</div>
+    <h3 style="font-family:'Fraunces',serif;font-size:24px;margin:8px 0 16px;">Doctoral and master's supervision.</h3>
+    <ul class="plain-list">
+      <li><span class="label">Co-guide for 8 doctoral scholars</span><span class="meta">Digital health · Supervised learning · Health insurance · Yoga · CVD · CKD · Higher education · Reproductive sciences</span></li>
+      <li><span class="label">Doctoral Advisory Committee Member for 50+ PhD scholars</span><span class="meta">PhD Protocol Expert Evaluator at MAHE</span></li>
+      <li><span class="label">Master's thesis supervisor / co-supervisor for 100+ students</span><span class="meta">Across MSc Biostatistics, Data Science, Digital Epidemiology, Nursing</span></li>
+      <li><span class="label">Board of Studies Member</span><span class="meta">BPH (Integrated MPH) MAHE · Department of Public Policy MAHE-Bengaluru · Providence College Calicut</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="panel" id="recognition">
+  <div class="eyebrow">Recognition</div>
+  <h2 class="h-section">Awards, prizes, and professional standing.</h2>
+  <p class="h-sub">Selected honours and memberships.</p>
+
+  <div class="subsection">
+    <div class="eyebrow">Honours &amp; Awards</div>
+    <h3>Selected recognitions across two decades.</h3>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2026</div>
+    <div><div class="award-title">First Place, AI Challenge</div><div class="award-issuer">Eli Lilly Bengaluru · Learning &amp; Development Week, April 2026</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2025</div>
+    <div><div class="award-title">Selected as Statistical Reviewer, Journal of Advanced Nursing</div><div class="award-issuer">Wiley · By invitation, April 2025</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2023</div>
+    <div><div class="award-title">Young Leadership Development Programme (YLDP), MAHE</div><div class="award-issuer">First cohort of 60 faculty selected institution-wide · 2023–2024</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2021</div>
+    <div><div class="award-title">Top 10 Teams, Grand Challenge Hackathon</div><div class="award-issuer">Manipal-GoK Bio-incubator · December 2021</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2020</div>
+    <div><div class="award-title">Top 10 Shortlist, Vichar Manthan National Article Writing</div><div class="award-issuer">Think India · 14th National Competition · October 2020</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2015</div>
+    <div><div class="award-title">First Prize, National Level Essay Competition</div><div class="award-issuer">Indian Institute of Public Administration, New Delhi · October 2015</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2015</div>
+    <div><div class="award-title">First Prize, National Safety Day Essay</div><div class="award-issuer">National Safety Council, Kerala Chapter</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2014</div>
+    <div><div class="award-title">First Prize, National Census Data Dissemination Workshop</div><div class="award-issuer">Directorate of Census Operations Tamil Nadu &amp; MIDS Chennai · sponsored by UN Women · December 2014</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2014</div>
+    <div><div class="award-title">Second Prize, National Statistics Day</div><div class="award-issuer">National Sample Survey Office, Ministry of Statistics, Government of India</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2012</div>
+    <div><div class="award-title">Gold Medallist, MSc Statistics</div><div class="award-issuer">Loyola College (Autonomous), University of Madras · 96.4%</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2010</div>
+    <div><div class="award-title">University Gold Medalist, BSc Computer Applications</div><div class="award-issuer">Mahatma Gandhi University · 98.3%</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2009</div>
+    <div><div class="award-title">Hindi Visharad</div><div class="award-issuer">Dakshin Bharat Hindi Prachar Sabha · Advanced Hindi certification</div></div>
+  </div>
+  <div class="award-item">
+    <div class="award-year">2007–10</div>
+    <div><div class="award-title">BPCL Scholarship for Academic Excellence</div><div class="award-issuer">Bharat Petroleum Corporation, Kochi Refinery</div></div>
+  </div>
+
+  <div class="subsection">
+    <div class="eyebrow">Professional Memberships</div>
+    <h3>Statistical and public-health societies.</h3>
+  </div>
+  <ul class="plain-list">
+    <li><span class="label">Healthcare Businesswomen's Association (HBA)</span><span class="meta">Member · March 2026 onwards</span></li>
+    <li><span class="label">Bengaluru Biometric Society</span><span class="meta">Registered Member · 2026</span></li>
+    <li><span class="label">Indian Public Health Association</span><span class="meta">Life Member · L/2025/KAR/10807 · 2025 onwards</span></li>
+    <li><span class="label">Indian Society for Probability and Statistics</span><span class="meta">Life Member · LM/40/1695/2023 · 2023 onwards</span></li>
+    <li><span class="label">Indian Society for Medical Statistics</span><span class="meta">Life Member · 202240/LM · 2023 onwards</span></li>
+    <li><span class="label">International Indian Statistical Association</span><span class="meta">Life Member · IN-00-2657 · 2023 onwards</span></li>
+    <li><span class="label">BITS Alumni Association</span><span class="meta">Lifetime Member · 39714 · 2023 onwards</span></li>
+    <li><span class="label">IASCT: Indian Association for Statistical Computing &amp; Technology</span><span class="meta">Registered Member</span></li>
+    <li><span class="label">MAHE-GoK Bio-incubator</span><span class="meta">Lifetime Member</span></li>
+    <li><span class="label">Manipal Universal Technology Business Incubator</span><span class="meta">Lifetime Member</span></li>
+  </ul>
+</section>
+
+<!-- REFLECTIONS -->
+<section class="panel" id="reflections">
+  <div class="reflection">
+    <div class="eyebrow">Reflections</div>
+    <h2 class="h-section">A few honest paragraphs.</h2>
+    <p class="h-sub">On teaching, leadership, and research, what I have come to believe.</p>
+  </div>
+
+  <div class="credo-block">
+    <h3>On teaching.</h3>
+    <p>I came to teaching the way many statisticians do, by accident. A doctorate that embeds ML to gamma distribution theory (way before the world screamed AI) does not prepare you to stand in front of nursing students who need to understand p-values and why they should care. But I stayed for reasons that had nothing to do with the accident.</p>
+    <p>I love designing courses. Not delivering them, designing them. Working out what a programme in Digital Epidemiology should contain when no one in the country has built one before. Figuring out what Statistics for Biotherapeutics means when the students are bench scientists, not mathematicians. Writing a certificate course in Health Technology Assessment because someone needed to teach it and I wanted to learn it first. That is the part no one tells you about teaching: the best courses come from subjects you did not fully understand when you agreed to teach them. Causal inference was like that. I said yes, then spent months reading, and the teaching was better for it because I was still close to the confusion.</p>
+    <p>The classroom itself is translation. Every statistical idea has at least three audiences: the one that wants the proof, the one that wants the intuition, and the one that wants the answer. The craft is recognising which audience is in the room and honouring all three when they sit together. I have taught machine learning to MBBS students reading radiology papers, biostatistics to nurses finishing thesis defences at midnight, and data analytics to public policy students who had never opened R. The method changes every time. The underlying negotiation does not.</p>
+    <p>But the audience for statistics should not stop at the university gate. I have spoken at an ATL Tinkering Lab at my old school, talked about Pi Day at a government school in Alappuzha, and run workshops in institutions that had never had a statistician visit. If a subject only makes sense to people who already have a degree in it, something has gone wrong with the teaching.</p>
+    <p>I do not believe knowledge can be assessed in marks on an exam. The reward of teaching is not the lecture and it is not the grade sheet. It is the smile, the particular one, the smile of enthusiasm, not politeness, when something clicks. It is the student who learns something you did not teach, who goes past the syllabus because the syllabus made them curious enough. Their success is my success, and I mean that without sentimentality. The best learning I have witnessed almost always happened in conversations outside classrooms.</p>
+  </div>
+
+  <div class="credo-block">
+    <h3>On leadership.</h3>
+    <p>I was given administrative responsibility early, not because I did not say no, but because someone saw something in me before I had a name for it. Coordinator of placements and industry collaborations at first, then alumni coordinator, editorial coordinator, social media coordinator for the school, Quality Coordinator for PSPH, Programme Coordinator for MSc Data Science, MSc Digital Epidemiology, and MSc Health Technology Assessments, and eventually Head of Department in-charge. I sat on Boards of Studies, joined doctoral advisory committees for over fifty PhD scholars, co-guided eight doctoral students across medicine, machine learning and digital health, and contributed data analytics to the university's THE and QS ranking submissions. Each role came because someone recognised a capacity to work with people, not just manage them.</p>
+    <p>What I have learned is that academic leadership is mostly invisible. It is showing up to committees that have no agenda, reading drafts on weekends, sitting through doctoral defences having studied every detail of the work being presented, and absorbing the small bruises so that the work continues. But the invisible part is not the hard part. The hard part is remembering that you are not above the people you represent. You are part of them. I love working with people. I see a leader in every member of my team. I learn from them. I grow because of them.</p>
+    <p>Somewhere along the way, I also became a quality person. Lean Six Sigma Black Belt, CQI/IRCA Lead Auditor in ISO 9001, ISO 14001, and ISO 45001. That is an unusual path for a statistician, but it never felt like a detour. Quality management, at its core, is the same discipline as good research: measure honestly, document what you find, and do not look away when the numbers are uncomfortable. It taught me that leadership is not only about people. It is also about systems, and about having the patience to improve them incrementally when no one is watching.</p>
+    <p>The Young Leadership Development Programme at MAHE in 2023 gave me language for what I had been doing without language for it. Leadership in academia is not charisma. It is patience, a willingness to be wrong in front of people you respect, and the quiet discipline of showing up reliably for years. Victory can never happen alone.</p>
+  </div>
+
+  <div class="credo-block">
+    <h3>On research.</h3>
+    <p>I have over 150 papers. Not all of them mattered equally, and I have made peace with that. The ones that mattered were almost never the ones that were strategically chosen. They came out of conversations, with a clinician puzzled by a dataset, a doctoral student stuck on a method, a colleague who had read something interesting. The Generative AI ethics paper started as a coffee conversation. The Ayushman Bharat health policy book started with a student's frustration about how health schemes are communicated to the people who need them most, and ended up published in six languages. The 30+ PROSPERO protocols started because evidence synthesis became, for me, a kind of meditation: read everything, record honestly, reduce to what is true.</p>
+    <p>Some of the work I value most is not the kind that gets cited. I have built instruments: questionnaires, scales, assessment tools. The Manipal Inventory of Academic Stress, the Manipal Inventory of Depression, Anxiety and Stress, the Death Literacy and End-of-life Awareness Preparedness questionnaire, adaptations and validations of tools for autism, occupational stress, uterine fibroid quality of life. Ten registered copyrights so far. Building a questionnaire is a different kind of research. You are not analysing someone else's data. You are constructing the thing that will generate the data, and every word in every item carries weight. It is painstaking, often invisible, and I find it deeply satisfying.</p>
+    <p>What I have come to believe is that research is most useful when it sits at the boundary between two disciplines that do not usually talk. The work I am most proud of crosses statistics and clinical medicine, statistics and reproductive science, statistics and public policy, statistics and ethics. I have worked on sperm cryopreservation and Raman spectroscopy of erythrocytes, on school mental health interventions in Nepal and tribal health awareness in coastal Karnataka, on neonatal autopsy methods and fibromyalgia sleep profiles. I did not plan a career that looks like that. It happened because I kept saying yes to people whose questions were more interesting than my own comfort with a method. Research gave me something no university could: the chance to learn subjects deeply that I would never be eligible to take a degree in. I will never hold an advanced medical degree, but I have sat inside the questions that medicine asks, and statistics gave me a seat at that table.</p>
+    <p>And I have never stopped being a student myself. Diplomas in mental health and wellness, mindfulness practitioner certification, a postgraduate programme in health economics, another in epidemiology that I am still pursuing, a certification in environment impact assessment. None of these were required for any job I held. I pursued them because the questions I was encountering in research kept pulling me into territories where my existing training was not enough, and I would rather learn properly than pretend to know.</p>
+    <p>In November 2025, I moved from academia to industry, joining Eli Lilly as a statistician on oncology clinical trials. It is a different world. The rigour is the same but the stakes feel closer, the timelines are harder, and the work has a directness that academia sometimes lacks. I do not yet know what this chapter will teach me. But I know the pattern by now: say yes to the question, learn what you need to learn, and trust that the mathematics will hold.</p>
+    <p>The mathematics is the easy part. The hard part is listening long enough to understand what someone actually needs from the numbers. The papers I care about most are the ones where the question came first and the technique followed, not the other way around.</p>
+  </div>
+
+  <div class="reflection" style="margin-top:64px;">
+    <div class="eyebrow">Press and Writing</div>
+    <h2 class="h-section">Published writing beyond journals.</h2>
+    <p class="h-sub">Essays, articles, and public engagement pieces.</p>
+  </div>
+
+  <ul class="plain-list" style="max-width:820px; margin:0 auto 56px;">
+    <li><span class="label">A Chance Encounter with E-Learning and the Way Forward</span><span class="meta">Higher Education Digest · 2020</span></li>
+    <li><span class="label">Marry Me, Later?: Changing Landscapes of Legal Age of Marriage for Women in India</span><span class="meta">Vichar Manthan · 2021 · Top 10 shortlist, 14th National Article Writing Competition</span></li>
+    <li><span class="label">Clean Campus, Safe Campus</span><span class="meta">Suraksha · 2015</span></li>
+    <li><span class="label">Women Safety: A Behavioural Safety Perspective</span><span class="meta">Suraksha · 2014</span></li>
+    <li><span class="label">Literacy in India: A Statistical Approach to Understanding Census Data with Special Reference to Women</span><span class="meta">Census Data Dissemination Workshop · First Prize · UN Women · 2014</span></li>
+    <li><span class="label">National Level Essay on Public Administration</span><span class="meta">Indian Institute of Public Administration, New Delhi · First Prize · 2015</span></li>
+  </ul>
+
+  <div class="reflection" style="margin-top:64px;">
+    <div class="eyebrow">Hobbies &amp; Interests</div>
+    <h2 class="h-section">Things I love beyond work.</h2>
+    <p class="h-sub">A few of the practices that keep me grounded.</p>
+  </div>
+
+  <div class="beyond-grid">
+    <div class="beyond-card">
+      <div class="icon">𝓦</div>
+      <h4>Creative Writing</h4>
+      <p>Essays, short pieces, the occasional prize-winning entry. National-level recognition from IIPA and Census authorities.</p>
+    </div>
+    <div class="beyond-card">
+      <div class="icon">𝓐</div>
+      <h4>Visual Art</h4>
+      <p>Drawing, watercolours, design experiments. The same patience statistics requires.</p>
+    </div>
+    <div class="beyond-card">
+      <div class="icon">𝓒</div>
+      <h4>Cinema</h4>
+      <p>An attentive viewer of films from many languages. A way to travel without leaving home.</p>
+    </div>
+    <div class="beyond-card">
+      <div class="icon">𝓜</div>
+      <h4>Carnatic Music</h4>
+      <p>Listening, learning, occasional singing. The mathematics of raga has never stopped fascinating me.</p>
+    </div>
+    <div class="beyond-card">
+      <div class="icon">𝓑</div>
+      <h4>Bharatanatyam</h4>
+      <p>Trained in the classical dance form. Discipline of body and breath that complements the desk.</p>
+    </div>
+    <div class="beyond-card">
+      <div class="icon">𝓛</div>
+      <h4>Languages</h4>
+      <p>Tamil (mother tongue) · English · Malayalam · Hindi (Visharad-certified) · Telugu · working Kannada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="panel" id="contact">
+  <div class="eyebrow">Contact</div>
+  <h2 class="h-section">Get in touch.</h2>
+  <p class="h-sub">I welcome conversations on clinical research and biostatistics, public health and data-driven decision-making, teaching, mentorship, and academic collaboration, and responsible and ethical use of AI in healthcare. If you would like to collaborate, discuss ideas, or explore opportunities, feel free to reach out.</p>
+
+  <div class="contact-grid">
+    <div class="contact-section">
+      <h3>Direct</h3>
+      <p><strong>Email:</strong> <a href="mailto:rvanilakshmi@outlook.com">rvanilakshmi@outlook.com</a></p>
+      <p><strong>Based in:</strong> Bengaluru, Karnataka, India</p>
+    </div>
+    <div class="contact-section">
+      <h3>Online Profiles</h3>
+      <ul class="profile-links">
+        <li><span class="name">LinkedIn</span><a href="https://in.linkedin.com/in/rvanilakshmi" target="_blank" rel="noopener">/in/rvanilakshmi</a></li>
+        <li><span class="name">Google Scholar</span><a href="https://scholar.google.com/citations?user=NcTKS7IAAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com</a></li>
+        <li><span class="name">ORCID</span><a href="https://orcid.org/0000-0003-2473-5311" target="_blank" rel="noopener">0000-0003-2473-5311</a></li>
+        <li><span class="name">Scopus</span><a href="https://www.scopus.com/authid/detail.uri?authorId=57445602200" target="_blank" rel="noopener">Author ID 57445602200</a></li>
+        <li><span class="name">Web of Science</span><a href="https://www.webofscience.com/wos/author/record/AAF-4026-2021" target="_blank" rel="noopener">AAF-4026-2021</a></li>
+        <li><span class="name">OSF</span><a href="https://osf.io/fe5ar" target="_blank" rel="noopener">osf.io/fe5ar</a></li>
+        <li><span class="name">Scilit</span><a href="https://www.scilit.com/scholars/19243109" target="_blank" rel="noopener">scilit.com/scholars/19243109</a></li>
+        <li><span class="name">Frontiers Loop</span><a href="https://loop.frontiersin.org/people/1009347" target="_blank" rel="noopener">loop.frontiersin.org/people/1009347</a></li>
+        <li><span class="name">Manipal Researcher</span><a href="https://researcher.manipal.edu/en/persons/vani-lakshmi-r" target="_blank" rel="noopener">researcher.manipal.edu</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="ornament">⊹ ⊹ ⊹</div>
+  <p>© 2026 Dr Vani Lakshmi R · Built with care, in Bengaluru.</p>
+</footer>
+
+<script id="pubs-data" type="application/json">[{"idx": 1, "year": 2026, "text": "Behera, D., Venkatesan, P., Jensen, M. P., Balebail Gopalakrishna, D., Patil, A., and <strong>Vani Lakshmi, R.</strong> (2026). The efficacy of hypnosis in chronic low back pain: Protocol for a systematic review and meta-analysis of randomized controlled trials. European Journal of Integrative Medicine, 82, 102605. <a href=\"https://doi.org/10.1016/j.eujim.2025.102605\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.93"}, {"idx": 2, "year": 2026, "text": "Mathew, S., L. Bellon-Harn, M., <strong>Lakshmi R, V.</strong>, and John, S. (2026). Beliefs and practices of Anganwadi and private preschool teachers towards emergent literacy. International Journal of Early Years Education, 1-22. <a href=\"https://doi.org/10.1080/09669760.2026.2645341\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.3"}, {"idx": 3, "year": 2026, "text": "Soman, B., Mallya, S. D., Narayanan, R. S., <strong>Vani Lakshmi, R</strong>., Kumar, A., Unnikrishnan, B., Kaur, H., and Shetty, R. S. (2026). Knowledge and attitudes toward healthcare services among a particularly vulnerable tribal group (PVTG) in coastal Karnataka, India: Findings from a community-based cross-sectional survey. F1000Research, 15, 542. <a href=\"https://doi.org/10.12688/f1000research.542\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.39"}, {"idx": 4, "year": 2026, "text": "Kookal, S., George, L. S., Chakrabarty, J., Vinish, V., Praharaj, S. K., <strong>Vani Lakshmi</strong>, S., Nayak, B. S., John, S., and Noronha, J. A. (2026). Interventions to improve mental health literacy and reduce stigma among young adults: A systematic review. Mental Health and Prevention, 32, 200501. <a href=\"https://doi.org/10.1016/j.mhp.2026.200501\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.56"}, {"idx": 5, "year": 2026, "text": "Meitei, H. Y., Predheepan, D., Uppangala, S., <strong>R, V. L.</strong>, Kalthur, G., Schlatt, S., and Adiga, S. K. (2026). Bicarbonate buffer enhances functional sperm selection compared to Zwitterionic buffers in sperm preparation. Scientific Reports, 16(1), 9332. <a href=\"https://doi.org/10.1038/s41598-026-44733-9\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.9"}, {"idx": 6, "year": 2026, "text": "Kotian, H., Kamath, A., Patil, D. S., and <strong>Vani Lakshmi, R.</strong> (2026). A scoping review of survival analysis methods for doubly interval censored data. Discover Applied Sciences. Springer International Publishing."}, {"idx": 7, "year": 2026, "text": "Tomy, M. N., C, S., Nair, S. S., Nagesh, J., Lewis, S., Sharan, K., Nair, S. S., Hussain, S., and <strong>R, V. L.</strong> (2026). A comparative analysis of peripheral dose measurement between Apex and Agility collimators in linear accelerators. Asian Pacific Journal of Cancer Prevention, 27(1), 287-296. <a href=\"https://doi.org/10.31557/APJCP.2026.27.1.287\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.6"}, {"idx": 8, "year": 2026, "text": "Mathew, N. P., Bhaskaran, U., Varma, M. D., Ruiter, R. A. C., Eshwara, V. K., Thunga, G., Kamath, A., <strong>Lakshmi, V. R</strong>., Sandhu, J. S., Shetty, S., and Mukhopadhyay, C. (2026). Veterinary antimicrobial stewardship in coastal Karnataka: A mixed-methods district-level assessment of prescribing practices, system gaps, and One Health implications. International Journal of One Health, 12(1). [Upcoming]"}, {"idx": 9, "year": 2026, "text": "Sreenivas, A., Lewis, L. E., Purkayastha, J., <strong>R, V. L.</strong>, and Mathew, M. (2026). Response to the comment on \"Exploring minimally invasive tissue sampling as an alternative to conventional autopsy in neonatal deaths.\" Forensic Science, Medicine and Pathology. Advance online publication. <a href=\"https://doi.org/10.1007/s12024-025-01171-9\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.7"}, {"idx": 10, "year": 2026, "text": "Tendulkar, S., Venkatesan, P., Mysore, S., and <strong>Lakshmi, R. V.</strong> (2026). Feasibility and efficacy of nasal rehabilitation on nasal symptoms in patients with chronic allergic rhinitis: A pilot study. Journal of Allergy and Clinical Immunology: Global, 5(3), 100674. <a href=\"https://doi.org/10.1016/j.jacig.2026.100674\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.2"}, {"idx": 11, "year": 2026, "text": "Vikhnan, D., Madhvacharya, V. V., Mundkur, A., Poojari, V. G., <strong>Lakshmi, R. V</strong>., Narayan, P. K., Adiga, S. K., Adiga, P. K., and Kalthur, G. (2026). Variations in serum ferritin levels in women with polycystic ovarian syndrome undergoing assisted reproduction. Journal of Taibah University Medical Sciences, 21(2), 268-281. <a href=\"https://doi.org/10.1016/j.jtumed.2026.03.004\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 12, "year": 2026, "text": "Jacob, S. L., Nayak, M. G., George, L. S., Noronha, J. A., Nayak, B. S., Y, N. S., Macaden, L., Damani, A. D., <strong>Lakshmi, R. V.</strong>, Panchalingam, S. S., and Murugan, S. N. (2026). Exploring stakeholder perspectives on nursing competencies in palliative care in India: A qualitative inquiry. BMC Palliative Care, 25(1), 60. <a href=\"https://doi.org/10.1186/s12904-026-01998-1\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.1"}, {"idx": 13, "year": 2026, "text": "Shenoy, N., Kaur, S., Kini, K. S., Shetty, N., and <strong>Lakshmi, R. V.</strong> (2026). Knowledge, attitude, and awareness of adolescents on the emergency management of traumatic dental injuries. Dentistry Journal, 14(3), 182. <a href=\"https://doi.org/10.3390/dj14030182\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.7"}, {"idx": 14, "year": 2026, "text": "Garg, J., Panakkal, N. C., Sukumar, S., Kadavigere, R., Thrivikraman, V., <strong>Lakshmi, R. V.,</strong> and Shanbhag, S. (2026). Predicting hepatic enhancement in contrast-enhanced CT abdomen: A systematic review and meta-analysis of patient-specific factors. Radiography, 32(1), 103264. <a href=\"https://doi.org/10.1016/j.radi.2025.103264\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.5"}, {"idx": 15, "year": 2025, "text": "Meitei, H. Y., Kadiregowda, N., Predheepan, D., <strong>Lakshmi, V. R</strong>., Uppangala, S., Hegde, P., Kalthur, G., Schlatt, S., and Adiga, S. K. (2025). No evidence of temporal decline in semen parameters over 17 years among men who underwent fertility evaluation from Indian southern states. American Journal of Men's Health, 19(5). <a href=\"https://doi.org/10.1177/15579883251383438\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.1"}, {"idx": 16, "year": 2025, "text": "Jobin, K., Ashok, L., Munivenkatappa, M., Andrews, J. J. T., <strong>Lakshmi, R. Vani</strong>, and John, S. (2025). Development of a school-based mindful yoga and meditation intervention module for enhancing adolescents' emotion regulation and well-being. *Journal of Education and Health Promotion, 14*(1), 558. <a href=\"https://doi.org/10.4103/jehp.jehp_408_25\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.3"}, {"idx": 17, "year": 2025, "text": "Somakumar, S., Salins, N. S., Bhat, K. V., Rao, K. S., Vani Lakshmi, R., Rajan, M. S., and Rajesh, V. (2025). Identification of predictors of response to continuous fentanyl infusion for acute pain management in children with haematolymphoid malignancies. *Pediatric Hematology Oncology Journal*, *10*(4, Supplement), 100655. <a href=\"https://doi.org/10.1016/j.phoj.2025.100655\" target=\"_blank\" rel=\"noopener\">link</a> [Q4] IF: 0.3"}, {"idx": 18, "year": 2025, "text": "U, V., Mohan, K. M., John, S., and <strong>Lakshmi R, V.</strong> (2025). Unveiling the impact of cartoon-based screen time exposure on the auditory and phonological processing abilities in young children. Speech, Language and Hearing, 28(1). <a href=\"https://doi.org/10.1080/2050571X.2025.2542041\" target=\"_blank\" rel=\"noopener\">link</a> [Q3] IF: 0.8"}, {"idx": 19, "year": 2025, "text": "Kookal, S., Chakrabarty, J., George, L. S., Praharaj, S. K., Noronha, J. A., Nayak, B. S., Vani Lakshmi, R., and John, S. (2025). Mental health literacy and its determinants among late adolescents in South India: A cross-sectional study. *Clinical Epidemiology and Global Health*. <a href=\"https://doi.org/10.1016/j.cegh.2025.102101\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 20, "year": 2025, "text": "Chogtu, B., Magazine, R., Prabhu, R., and <strong>Vani Lakshmi, R</strong>. (2025). Air pollution and chronic kidney disease: An emerging challenge. Clinical Epidemiology and Global Health, 102204. <a href=\"https://doi.org/10.1016/j.cegh.2025.102204\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 21, "year": 2025, "text": "Rao, S. A., Sau, K., Saha, S., <strong>R, V. L.,</strong> and Acharya, A. M. (2025). The relationship between activities of daily living performance and self-efficacy among clients with hand injury in Indian context: A cross-sectional study protocol. SSRN. <a href=\"https://doi.org/10.2139/ssrn.5414520\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 22, "year": 2025, "text": "Hegde, A. G., Nayak, S., <strong>Vani Lakshmi, R</strong>., Sharan, K., Varghese, J. J., and Devadas, U. (2025). Cross-cultural adaptation, translation and pre-testing of the Caregiver Analysis of Reported Experiences with Swallowing Disorders (CARES) screening tool in Kannada. Journal of Patient-Reported Outcomes, 9, 109. <a href=\"https://doi.org/10.1186/s41687-025-00863-8\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.8"}, {"idx": 23, "year": 2025, "text": "Sreenivas, A., Lewis, L., Prakash, P. Y., Purkayastha, J., <strong>Vani Lakshmi, R</strong>., and Mathew, M. (2025). Comparative agreement of clinical diagnoses and neonatal autopsy findings in a tertiary care center. The Journal of Maternal-Fetal and Neonatal Medicine, 38(1), 2554711. <a href=\"https://doi.org/10.1080/14767058.2025.2554711\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.8"}, {"idx": 24, "year": 2025, "text": "Borah, K., Jose, T. T., Nagaraj, A. K. M., and <strong>Vani Lakshmi, R.</strong> (2025). Knowledge, attitude and gatekeeper behaviour towards suicide prevention among pre university college teachers: A cross-sectional descriptive survey. Clinical Epidemiology and Global Health, 35. <a href=\"https://doi.org/10.1016/j.cegh.2025.102125\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 25, "year": 2025, "text": "Borah, K., Jose, T. T., Mysore Nagaraj, A. K., Vani Lakshmi, R., and Moxham, L. (2025). Corrigendum to \"Knowledge, attitude and gatekeeper behaviour towards suicide prevention among Pre University college teachers: A cross-sectional descriptive survey\" [Clinical Epidemiology and Global Health 35 (2025) 102125]. Clinical Epidemiology and Global Health, 102153. <a href=\"https://doi.org/10.1016/j.cegh.2025.102153\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 26, "year": 2025, "text": "Sreenivas, A., Lewis, L., Purkayastha, J., <strong>Lakshmi, R. V.</strong>, and Mathew, M. (2025). Exploring minimally invasive tissue sampling as an alternative to conventional autopsy in neonatal deaths. Forensic Science, Medicine and Pathology. Advance online publication. <a href=\"https://doi.org/10.1007/s12024-025-01069-6\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.7"}, {"idx": 27, "year": 2025, "text": "Naik, A., Sheilini, M., Chaudhuri, S., Sharma, M., and <strong>Lakshmi, R. V.</strong> (2025). Predictive model for assessment of ICU delirium among patients in critical care units: Prospective observational study. Journal of Education and Health Promotion, 14, 243. <a href=\"https://doi.org/10.4103/jehp.jehp_1262_24\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.6"}, {"idx": 28, "year": 2025, "text": "Braggs, P. L., Noronha, J. A., Hebbar, S., Pais, M., Shwetha, T. S., and <strong>Vani Lakshmi, R.</strong> (2025). Maternal-physiological parameters and prenatal mindfulness interventions: A scoping review. Journal of Education and Health Promotion, 14, 506. <a href=\"https://doi.org/10.4103/jehp.jehp_2061_24\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.39"}, {"idx": 29, "year": 2025, "text": "Remesan, A. K., Chandra Sekaran, V., Poojari, S., Jothikaran, T. A. J., <strong>Lakshmi, V. R.</strong>, and Ashok, L. (2025). Pathway of effects of adverse childhood experiences on psychological distress and substance use among emerging adults: A structural equation modeling approach. Clinical Epidemiology and Global Health, 34, 102114. <a href=\"https://doi.org/10.1016/j.cegh.2025.102114\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 30, "year": 2025, "text": "Raj, R., Begum, J., Ali, S. I., Panda, M., and <strong>R, V. L</strong>. (2025). Development and validation of a health awareness booklet: \"Reproductive health schemes for tribal women of Jharkhand\" a study protocol. PLoS ONE, 20(5), e0322777. <a href=\"https://doi.org/10.1371/journal.pone.0322777\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.9"}, {"idx": 31, "year": 2025, "text": "Vaz, C. J., Sheilini, M., George, L. S., Mathias, E. G., and <strong>R, Vani.</strong> (2025). Effectiveness of mobile health interventions on cardiovascular health among young adults: A systematic review protocol. Manipal Journal of Nursing and Health Sciences, 11(1). [Accepted for publication]"}, {"idx": 32, "year": 2025, "text": "Kotian, R., Sheilini, M., George, L. S., Mathias, E. G., and <strong>R, Vani.</strong> (2025). Effectiveness of stair climbing on obesity and insulin resistance among adults: A systematic review protocol. Manipal Journal of Nursing and Health Sciences, 11(1). [Accepted for publication]"}, {"idx": 33, "year": 2025, "text": "Bhat, P., Dhyani, V. S., <strong>Lakshmi, V.</strong>, Uppangala, S., Adiga, S. K., Adiga, P., Kumar, P., and Gupta, A. (2025). Congenital anomalies observed in children conceived through assisted reproductive technology: A systematic review and meta-analysis. Journal of Assisted Reproduction and Genetics. Advance online publication. <a href=\"https://doi.org/10.1007/s10815-025-03454-0\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.1"}, {"idx": 34, "year": 2025, "text": "Kunjappan, A., Reddy, M. M., Prabhu, S. S., Bhatt, M. T., and <strong>Lakshmi, V. R</strong>. (2025). Impact of NIV on quality of sleep among patients admitted to CCU. Indian Journal of Critical Care Medicine, 25. <a href=\"https://www.ijccm.org/journal/aop/IJCCM/1\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.8"}, {"idx": 35, "year": 2025, "text": "Vineetha, K. K., Rao, B. K., Archana, P. R., Bhat, S. K., <strong>Lakshmi, R. V.</strong>, and Bhat, R. G. (2025). Thyroid-stimulating hormone levels in women with uterine fibroids: A healthcare setting perspective from coastal Karnataka. Indian Journal of Community Medicine. Advance online publication. <a href=\"https://doi.org/10.4103/ijcm.ijcm_66_24\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.2"}, {"idx": 36, "year": 2025, "text": "Prabhath, S., Kulkarni, U., <strong>Lakshmi R, V.</strong>, Patra, B., K, E., Prabhu, D. A., and Nayak, K. R. (2025). Visual hermeneutics as a tool to introduce empathy and core physician attributes in doctor-patient relationship for first-year medical undergraduate students. BMC Medical Education, 25(1), 145. <a href=\"https://doi.org/10.1186/s12909-025-06742-6\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.7"}, {"idx": 37, "year": 2025, "text": "Badagabettu, S., Kurien, A., <strong>Lakshmi, V.</strong>, Noronha, J., George, L., Govindan, S., and Shroff, D. (2025). Exploring the psychosocial status and lived experiences of haemophilia carriers: A comprehensive mixed methods study. The Journal of Haemophilia Practice, 12(1), 34-47. <a href=\"https://doi.org/10.2478/jhp-2025-0002\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 38, "year": 2025, "text": "Kamath, R., Banu, M., Shet, N., Jayapriya, V. R., <strong>Vani Lakshmi, R</strong>., Jahangir, S., Akthar, N., Brand, H., Prabhu, V., Singh, V., and Kamath, S. (2025). Awareness of and challenges in utilizing the Ayushman Bharat Digital Mission for healthcare delivery: Qualitative insights from university students in coastal Karnataka in India. Healthcare, 13, 382. <a href=\"https://doi.org/10.3390/healthcare13040382\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.4"}, {"idx": 39, "year": 2025, "text": "M, Monica, Pooja, S., Sanjana, S. R., Agrawal, S., Haridas, S., <strong>Vani Lakshmi, R</strong>., Gudi, N., Nair, S. C., and Rani, U. (2025). Adolescent health literacy in India: Insights from multi-state cross-sectional study. International Journal of Adolescence and Youth, 30(1). <a href=\"https://doi.org/10.1080/02673843.2025.2471534\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.5"}, {"idx": 40, "year": 2025, "text": "Vineetha, K. K., Bhat, R. G., Archana, P. R., Ramachandra, P., <strong>Lakshmi, V. R</strong>., and Rao, B. K. (2025). Development and validation of uterine fibroid quality of life and health-related lifestyle (UF-QLHRL) questionnaire in an Indian population. Clinical Epidemiology and Global Health, 29, 101963. <a href=\"https://doi.org/10.1016/j.cegh.2025.101963\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 41, "year": 2025, "text": "Shetty, D. P., Patil, N. J., Shyamala, G., Belle, V. S., Annapoorna, K., and <strong>R. Vani Lakshmi</strong>, Bhargav, H., Bhandary, R., and George, A. (2025). Yoga as a holistic intervention for primary dysmenorrhea: A pilot study on pain, mental well-being, and quality of life. *Advances in Integrative Medicine, 12*(4), 100558. <a href=\"https://doi.org/10.1016/j.aimed.2025.100558\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 42, "year": 2024, "text": "G, P., K, M. M., <strong>R, V.,</strong> and Krishnan, G. (2024). Influence of auditory-based cognitive training on auditory resolution, executive function, and working memory skills in individuals with mild cognitive impairment: A pilot randomized controlled study. F1000Research, 13, 1022. <a href=\"https://doi.org/10.12688/f1000research.152775.1\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.39"}, {"idx": 43, "year": 2024, "text": "Sreedevi, A., <strong>Vani Lakshmi, R</strong>., and Janodia, M. D. (2024). Enhancing profitability of complex generics: A comparative study of market dynamics in United States and India [Preprint]. Research Square. <a href=\"https://doi.org/10.21203/rs.3.rs-5331743/v1\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 44, "year": 2024, "text": "Martis, C. S., Chandrababu, R., <strong>R, V. L.</strong>, Bhandary, R. P., Tolson, D., Bhandary, P. V., and Devi, E. S. (2024). Caregivers' awareness regarding the care of dementia and the coping strategies among the caregivers of people with dementia: A cross-sectional study in Udupi District, Karnataka. Frontiers of Nursing, 11(4), 447-455. <a href=\"https://doi.org/10.2478/fon-2024-0049\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.1"}, {"idx": 45, "year": 2024, "text": "Acharya, N., Acharya, A. M., Bhat, A. K., Punja, D., <strong>Lakshmi, R. V.</strong>, Suryavanshi, C., Adiga, M., S. D., M., and Acharya, S. (2024). Role of Abhraka-Bhasma (Nanomaterial Processed Biotite) in ameliorating neuropathic pain with or without electrical stimulation in a rodent sciatic nerve neurotmesis model. African Journal of Biomedical Research, 27(3), 2060-2068. <a href=\"https://doi.org/10.53555/AJBR.v27i3.4922\" target=\"_blank\" rel=\"noopener\">link</a> [Q3]"}, {"idx": 46, "year": 2024, "text": "Suresh Poojary, P., Shreya, A. B., Mutalik, S., Sachdev, D., Taneja, N. K., Raghu, S. V., <strong>Vani Lakshmi, R.</strong>, and Kalthur, G. (2024). Mitigating effect of chitosan-coated zinc oxide nanoparticles on cryopreservation-induced DNA damage in human spermatozoa. Journal of Taibah University for Science, 18(1). <a href=\"https://doi.org/10.1080/16583655.2024.2422648\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 3.0"}, {"idx": 47, "year": 2024, "text": "Rana, R., Kamath, S. U., Shastri, B. A., Shashikiran, U., Maiya, G. A., Kamath, U., Rao, R. S., and <strong>Vani Lakshmi, R</strong>. (2024). Evaluation of thiol/disulfide homeostasis and ischemia-modified albumin in metabolic syndrome patients. Advances in Redox Research, 38, 100116. <a href=\"https://doi.org/10.1016/j.arres.2024.100116\" target=\"_blank\" rel=\"noopener\">link</a> [Q2]"}, {"idx": 48, "year": 2024, "text": "Somakumar, S., Basheer, F. T., Vijayanarayana, K., <strong>Lakshmi, V. R.</strong>, Bhat, S. N., Rodrigues, G. S., Raj, G. M., and S. E. A. (2024). Factors affecting readmission in patients with surgical site infection: A graphical and prediction model-based approach. Surgical Infections. Advance online publication. <a href=\"https://doi.org/10.1089/sur.2024.087\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.4"}, {"idx": 49, "year": 2024, "text": "Pinto, C. F., <strong>Lakshmi, V. R</strong>., and Tiwari, S. (2024). Cross-cultural adaptation and validation of the Autism Family Experience Questionnaire to an Indian context. International Journal of Developmental Disabilities, 1-9. <a href=\"https://doi.org/10.1080/20473869.2023.2280808\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.5"}, {"idx": 50, "year": 2024, "text": "Lambor, M. P. D., Reshmi, B., <strong>Vani Lakshmi, R.</strong>, Devi, E. S., and Gudi, M. N. (2024). Cultural humility training interventions for healthcare students to improve care for gender and sexual minority groups: Protocol for a systematic review and proposed meta-analysis. MethodsX, 11, 102963. <a href=\"https://doi.org/10.1016/j.mex.2024.102963\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.6"}, {"idx": 51, "year": 2024, "text": "Poudel, P. P., Ghosh, A., Bhattarai, C., Pradhan, S., Panthi, N., Joshi, D. S., Khadka, S., Kumari, S., Kalthur, G., and <strong>Lakshmi, R. V.</strong> (2024). Expression pattern of Calbindin-D28k, NeuN proteins, ATOH1, and EN2 genes in the human fetal cerebellum. Translational Research in Anatomy, 38, 100370. <a href=\"https://doi.org/10.1016/j.tria.2024.100370\" target=\"_blank\" rel=\"noopener\">link</a> [Q3] IF: 0.7"}, {"idx": 52, "year": 2024, "text": "Pandya, R. K., Salian, S. R., <strong>Lakshmi, V. R.</strong>, Uppangala, S., Kalthur, G., Gupta, S., and Adiga, S. K. (2024). Global DNA methylation level in spermatozoa is not associated with ICSI fertilization outcome and embryo quality in donor oocyte programme. Human Fertility, 27(1), 2421191. <a href=\"https://doi.org/10.1080/14647273.2024.2421191\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.0"}, {"idx": 53, "year": 2024, "text": "Vineetha, K. K., Archana, P. R., Rao, B. K., Ballal, M., Dutta, B., <strong>Vani Lakshmi, R</strong>., and Bhat, R. G. (2024). GC-MS quantification of fecal short-chain fatty acids and spectrophotometric detection of indole: Do rectal swabs produce comparable results as stool samples? A pilot study. Rapid Communications in Mass Spectrometry, 38(24), e9923. <a href=\"https://doi.org/10.1002/rcm.9923\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.8"}, {"idx": 54, "year": 2024, "text": "Clare, R., and <strong>Vani Lakshmi, R.</strong> (2024). Artificial intelligence in nano-technology (ANT): A scoping review of existing policies interlinking AI and nanotechnology in healthcare. In Lecture Notes in Electrical Engineering. Springer Nature. [Accepted for publication] [Q4]"}, {"idx": 55, "year": 2024, "text": "<strong>Vani Lakshmi, R.,</strong> and Clare, R. (2024). What COVID-19 taught us: A scoping-review lens to the best practices in online teaching-learning in higher education in India. In Lecture Notes in Electrical Engineering. Springer Nature. [Accepted for publication] [Q4]"}, {"idx": 56, "year": 2024, "text": "Clare, R., <strong>Vani Lakshmi, R.</strong>, Kamath, A., Kolekar, S. V., and Kundapur, P. P. (2024). Patient data and privacy in the realm of extended reality: A digital health perspective. In International Conference on AI in Healthcare: Conference Proceedings. <a href=\"https://doi.org/10.5281/zenodo.13150977\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 57, "year": 2024, "text": "<strong>Vani Lakshmi, R.,</strong> and Clare, R. (2024). Demystifying the ethical framework for generative AI in healthcare: A data science perspective. In Lecture Notes in Computer Science. Springer Nature. <a href=\"https://doi.org/10.1007/978-3-031-67285-9_20\" target=\"_blank\" rel=\"noopener\">link</a> [Q1]"}, {"idx": 58, "year": 2024, "text": "Kamath, S., Poojary, M., Shetty, H., Umesh, K., Kar, S., <strong>Vani Lakshmi, R</strong>., Hajare, G., Thomas, A., Brand, H., and Jahangir, S. (2024). \"Private hospitals generally offer better treatment and facilities\": Out-of-pocket expenditure on healthcare and the preference for private healthcare providers in South India. International Journal of Environmental Research and Public Health, 21(10), 1287. <a href=\"https://doi.org/10.3390/ijerph21101287\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 4.6"}, {"idx": 59, "year": 2024, "text": "Htoo, S. T. T. N., Kamath, R., <strong>Lakshmi, V. R</strong>., and Tiwari, K. (2024). Barriers in enabler for hospitals to control hospital-acquired infections in India: A systematic literature review. Preprints with The Lancet. <a href=\"https://doi.org/10.21203/rs.3.rs-4894930/v1\" target=\"_blank\" rel=\"noopener\">link</a> [Q2]"}, {"idx": 60, "year": 2024, "text": "Vasudeva, A., Shankar, C. V., Shetty, N., Hanumaiah, G., Shivananda, R. P., Ramachandra, P., Rao, B. K., and <strong>Lakshmi, R. V.</strong> (2024). Structured antenatal exercise protocol versus physical activity counseling: A comparison of two physical activity interventions among women with gestational diabetes mellitus: Randomized controlled trial. International Journal of Diabetes in Developing Countries, 1-9. <a href=\"https://doi.org/10.1007/s13410-024-01383-9\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.4"}, {"idx": 61, "year": 2024, "text": "Konsam, M., Praharaj, S. K., Shetty, J., Panda, S., <strong>Lakshmi R, V.</strong>, Kamath, A., and D'Souza, S. R. (2024). Effectiveness of Comprehensive Health-literacy And Relaxing Music (CHARM) intervention on pregnancy-related anxiety among low-risk primigravid women: A randomized controlled trial. Psychology of Music. <a href=\"https://doi.org/10.1177/03057356241258958\" target=\"_blank\" rel=\"noopener\">link</a> [Q3] IF: 1.3"}, {"idx": 62, "year": 2024, "text": "Kotian, H., Kamath, A., Patil, D. S., and <strong>Lakshmi, V.</strong> (2024). Handling doubly interval-censored data in survival analysis: A scoping review. OSF Preprints. [Q4]"}, {"idx": 63, "year": 2024, "text": "Kalra, R. V., Nayak, S., Ballala, V., Bakkannavar, K., Aparna, J., and <strong>Lakshmi, R. V.</strong> (2024). An interventional study highlighting the importance of Golden Hour management training among first responders in Udupi District. Journal of Simulation in Medical Learning and Application (J-SIMLA), 16(2), 32-43. [Q3]"}, {"idx": 64, "year": 2024, "text": "Varughese, N. A., Panakkal, N. C., Nair, V. T., Kadavigere, R., <strong>Lakshmi, V.</strong>, and Sukumar, S. (2024). Effect of patient characteristics on aortic attenuation in iodinated contrast-enhanced abdominopelvic CT: A retrospective study. Radiography, 30(Supplement 1), 94-101. <a href=\"https://doi.org/10.1016/j.radi.2024.07.012\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.5"}, {"idx": 65, "year": 2024, "text": "Kunnath, A. N., Parker, S. K., Crasta, D. N., Kunhiraman, J. P., Madhvacharya, V. V., Kumari, S., Nayak, G., <strong>Vani Lakshmi, R.</strong>, Modi, P. K., Keshava Prasad, T. S., Kumar, A., Khandelwal, A., Ghani, N. K., Kabekkodu, S. P., Adiga, S. K., and Kalthur, G. (2024). Metformin augments major cytoplasmic organization except for spindle organization in oocytes cultured under hyperglycemic and hyperlipidemic conditions: An in vitro study. Toxicology and Applied Pharmacology, 490, 117039. <a href=\"https://doi.org/10.1016/j.taap.2024.117039\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.3"}, {"idx": 66, "year": 2024, "text": "Chogtu, B., Prabhu, R. A., <strong>Vani Lakshmi, R.</strong>, and Magazine, R. (2024). Early referral in chronic kidney disease: Seizing the opportunity. Clinical Epidemiology and Global Health, 28, 101711. <a href=\"https://doi.org/10.1016/j.cegh.2024.101711\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 67, "year": 2024, "text": "Sheik, S. M., Mallya, H. M., Manel, D. N., Pai, K. S. R., <strong>Iyer, V. L. R</strong>., Suryakanth, V. B., and Shenoy, R. P. (2024). Effect of treadmill exercise on the liver, kidney health and serum IL-10 levels in high-fat diet-induced obese male Wistar rats. Journal of Applied Pharmaceutical Science. Advance online publication. <a href=\"https://doi.org/10.7324/JAPS.2024.201460\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.2"}, {"idx": 68, "year": 2024, "text": "Tholeti, P., Koulmane Laxminarayana, S. L., <strong>Lakshmi, V. R</strong>., Bhat, V. K., Kumar, V. P., Uppangala, S., Kalthur, G., Spears, N., and Adiga, S. K. (2024). Spermatogonial quantity in prepubertal boys undergoing fertility preservation is comparable between haematological and non-haematological cancers. Human Fertility, 27(1). <a href=\"https://doi.org/10.1080/14647273.2024.2362980\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.0"}, {"idx": 69, "year": 2024, "text": "Ughreja, R. A., Prem, V., Balebail Gopalakrishna, D., Singh, Y. P., and <strong>Vani Lakshmi, R.</strong> (2024). Effectiveness of craniosacral therapy, Bowen therapy, static touch and standard exercise program on sleep quality in fibromyalgia syndrome: A randomized controlled trial. Journal of Integrative Medicine. <a href=\"https://doi.org/10.1016/j.joim.2024.06.003\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.9"}, {"idx": 70, "year": 2024, "text": "Predheepan, D., Salian, S. R., Uppangala, S., <strong>Vani Lakshmi, R</strong>., Kalthur, G., Kovacic, B., and Adiga, S. K. (2024). Embryos from prepubertal hyperglycemic female mice respond differentially to oxygen tension in vitro. Cells, 13(11), 954. <a href=\"https://doi.org/10.3390/cells13110954\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 5.1"}, {"idx": 71, "year": 2024, "text": "Shrestha, S., Velayudhan, B., Shashidhara, Y. N., <strong>Vani Lakshmi, R</strong>., and Khattri, J. B. (2024). Effectiveness of School-based Substance abuse Prevention Programme (SSPP) on awareness, attitude, peer pressure, and life skills among adolescents in selected public schools of Pokhara, Nepal: A cluster randomized trial protocol. Mental Health and Prevention, 34. <a href=\"https://doi.org/10.1016/j.mhp.2024.200342\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.56"}, {"idx": 72, "year": 2024, "text": "Assariparambil, A. R., Noronha, J. A., Hande, H. M., Devi, E. S., <strong>Vani Lakshmi, R.</strong>, and George, A. (2024). Cognition, depression, and functional health profiles (CoDe-F) of non-debilitated aged in the coastal belt of southern India: An explorative study at homes for the aged. Clinical Epidemiology and Global Health, 27. <a href=\"https://doi.org/10.1016/j.cegh.2024.101600\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 73, "year": 2024, "text": "Mascarenhas, R., Nayak, A., Pawani, D., Misri, Z., Mahmood, A., Kumar, K. V., and <strong>Vani Lakshmi, R. I</strong>. (2024). Predictors of return to work after a year since stroke: A systematic review. Clinical Epidemiology and Global Health, 27. <a href=\"https://doi.org/10.1016/j.cegh.2024.101561\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 74, "year": 2024, "text": "Jijo, A., Munshi, I., Uppangala, S., Rajendran, R., <strong>Lakshmi, R.</strong>, Kumar, R. V. P., Kalthur, G., Kovacic, B., Sachdeva, G., and Adiga, S. K. (2024). Secretomes from conventional insemination and intra-cytoplasmic sperm injection derived embryos differentially modulate endometrial cells in vitro. Reproductive Sciences. Advance online publication. <a href=\"https://doi.org/10.1007/s43032-024-01504-z\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.6"}, {"idx": 75, "year": 2024, "text": "Badaik, D., Chinnaraju, K. T., Kamath, S., <strong>Vani Lakshmi, R.</strong>, Sathiyamoorthy, R., Namachivayam, L., and Kamath, R. (2024). Development of research on continuous usage intention of M-Wallets: A systematic review of literature from 2011 to 2021. Journal of Advanced Research in Applied Sciences and Engineering Technology, 35(1), 156-172. <a href=\"https://doi.org/10.37934/araset.34.3.156172\" target=\"_blank\" rel=\"noopener\">link</a> [Q3]"}, {"idx": 76, "year": 2024, "text": "Nepal, B., Devi, M. T., Sharma, P., and <strong>Vani Lakshmi, R.</strong> (2024). Effectiveness of Video Assisted Teaching Module (VATM) on contraceptive methods with regard to knowledge and attitude of couples residing in the villages of Sikkim. Journal of Community and Public Health Nursing, 10, 489. <a href=\"https://doi.org/10.4172/2471-9846.1000489\" target=\"_blank\" rel=\"noopener\">link</a> [Q4]"}, {"idx": 77, "year": 2024, "text": "Martis, C. S., Bhandary, R. P., Chandrababu, R., <strong>Vani Lakshmi, R</strong>., Bhandary, P. V., Noronha, J. A., Chakrabarty, J., Tolson, D., and Devi, E. S. (2024). Caring burden and quality of life among the caregivers of people living with dementia: A cross-sectional study in Udupi district of Karnataka. Home Health Care Services Quarterly. <a href=\"https://doi.org/10.1080/01621424.2023.2301417\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.3"}, {"idx": 78, "year": 2024, "text": "Tamang, R., Velayudhan, B., Bhandari, S. S., Jose, T. T., <strong>Vani Lakshmi, R.</strong>, and Valsaraj, B. P. (2024). Effectiveness of school-based Scaling up Teen Mental Health Program through peer synergy (SUTMP) on mental health promotion, mental health literacy, and resilience among senior secondary students of Sikkim, India: A cluster randomized controlled trial protocol. Mental Health and Prevention, 36, 200370. <a href=\"https://doi.org/10.1016/j.mhp.2024.200370\" target=\"_blank\" rel=\"noopener\">link</a> [Q3] IF: 1.56"}, {"idx": 79, "year": 2024, "text": "Skaria, G., Reshmi, B., K, M. S., Shetty, S., and <strong>Lakshmi, R. V.</strong> (2024). Development and testing of an electronic diabetes diary integrated with a hospital information system for individuals with type 2 diabetes mellitus: Protocol for a mixed methods study. JMIR Research Protocols, 13, e50732. <a href=\"https://doi.org/10.2196/50732\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.7"}, {"idx": 80, "year": 2024, "text": "Sreenivas, A., Lewis, L., Purkayastha, J., <strong>Lakshmi, R. V.,</strong> and Mathew, M. (2024). Standardizing minimally invasive tissue sampling of postmortem brain using Bard Monopty needle in newborns with neurological injury. Fetal and Pediatric Pathology, 1-17. <a href=\"https://doi.org/10.1080/15513815.2023.2301448\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 1.3"}, {"idx": 81, "year": 2023, "text": "Nair, A. R., Chougule, S., Songa, I. R., <strong>Lakshmi R, V</strong>., Kamath, S., Kamath, R., and Verma, R. (2023). Pecuniary inputs and their applications to intelligent decision making in choice of robotic and conventional surgeries in gynecologic oncology and urology in a private sector super speciality tertiary care hospital in southern India. International Journal of Intelligent Systems and Applications in Engineering, 12(4s), 717-722. [Q4]"}, {"idx": 82, "year": 2023, "text": "Mascarenhas, R., Nayak, A., Joshua, A. M., Krishnan, S. K., Iyer, <strong>V. L. R.</strong>, Tedla, J. S., and Reddy, R. S. (2023). Oblique direction reach test: Evaluating psychometric properties in stroke population. PeerJ, 11, e16562. <a href=\"https://doi.org/10.7717/peerj.16562\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.3"}, {"idx": 83, "year": 2023, "text": "Reddy, C. O., Kamath, R., Nazareth, J. J. J., <strong>Lakshmi, V.,</strong> S, R., and Kamath, S. (2023). Analysis of quality indicators in operation theatres and intensive care units in a tertiary care hospital in South India. Journal of Health Administration, 26(2), 66-83."}, {"idx": 84, "year": 2023, "text": "Rajpurohit, S., Musunuri, B., Mohan, P. B., <strong>Lakshmi, R. V.,</strong> Bhat, G., and Shetty, S. (2023). Development and evaluation of patient information leaflet for liver cirrhosis patients. Clinical Epidemiology and Global Health, 101436. <a href=\"https://doi.org/10.1016/j.cegh.2023.101436\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 85, "year": 2023, "text": "Sathiyamoorthy, R., <strong>Ramesh, V. L.</strong>, Chettri, M., Ziephru, S., and Kamath, R. (2023). Enablers and barriers to online education in India: A systematic review. International Journal of Educational Reform. <a href=\"https://doi.org/10.1177/10567879231202485\" target=\"_blank\" rel=\"noopener\">link</a> [Q3] IF: 1.0"}, {"idx": 86, "year": 2023, "text": "Pandya, R. K., Jijo, A., Cheredath, A., Uppangala, S., Salian, S. R., <strong>Lakshmi, V. R.</strong>, Kumar, P., Kalthur, G., Gupta, S., and Adiga, S. K. (2023). Differential sperm histone retention in normozoospermic ejaculates of infertile men negatively affects sperm functional competence and embryo quality. Andrology. Advance online publication. <a href=\"https://doi.org/10.1111/andr.13541\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.1"}, {"idx": 87, "year": 2023, "text": "Somu, G., Mathew, A., and <strong>Lakshmi, R. V.</strong> (2023). Understanding the economic burden of cancer care and the utility of health insurance: An exploratory cross-sectional study in a tertiary care hospital in Karnataka, India. Indian Journal of Public Health, 67(3), 357-363. <a href=\"https://doi.org/10.4103/ijph.ijph_1405_22\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.1"}, {"idx": 88, "year": 2023, "text": "John, C., Nayak, K., <strong>R, V. L.</strong>, Salins, P. L., Varghese, A., and Dsouza, R. M. C. (2023). Prevalence of urinary tract infection among pregnant women in a tertiary care hospital, Karnataka: Retrospective study. Reviews and Research in Medical Microbiology. <a href=\"https://doi.org/10.1097/MRM.0000000000000376\" target=\"_blank\" rel=\"noopener\">link</a> [Q4]"}, {"idx": 89, "year": 2023, "text": "Nazareth J, Kamath R, <strong>Lakshmi RV</strong>, Somu G. An Exploratory Study on Adherence to Joint Commission International Standards on Facility Management and Safety at a Tertiary Care Hospital in Dubai, United Arab Emirates. Open Access Maced J Med Sci [Internet]. 2023 Feb. 4 [cited 2026 Apr. 30];11(E):271-5. Available from: <a href=\"https://oamjms.eu/index.php/mjms/article/view/10590\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 90, "year": 2023, "text": "Reeja, A. G., Narasimhaswamy, N., <strong>Lakshmi R, V.</strong>, and Nayak, K. (2023). A retrospective exploratory analysis on surgical site infections in a tertiary care hospital in Karnataka. Reviews and Research in Medical Microbiology. <a href=\"https://doi.org/10.1097/MRM.0000000000000374\" target=\"_blank\" rel=\"noopener\">link</a> [Q4]"}, {"idx": 91, "year": 2023, "text": "Ughreja, R. A., Venkatesan, P., Balebail Gopalakrishna, D., Singh, Y. P., and <strong>Vani Lakshmi, R.</strong> (2023). Sleep profile and its correlation with clinical variables in fibromyalgia syndrome: A cross-sectional study. Journal of Taibah University Medical Sciences. <a href=\"https://doi.org/10.1016/j.jtumed.2023.08.010\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 92, "year": 2023, "text": "Cheredath, A., Uppangala, S., Jijo, A., <strong>Vani Lakshmi, R</strong>., Gowda, G. A. N., Kalthur, G., and Adiga, S. K. (2023). Use of sensitivity-enhanced nuclear magnetic resonance spectroscopy equipped with a 1.7-mm cryogenically cooled micro-coil probe in identifying human sperm intracellular metabolites. Reproduction, Fertility and Development. <a href=\"https://doi.org/10.1071/RD22246\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.9"}, {"idx": 93, "year": 2023, "text": "Amin, R., Vaishali, K., Maiya, G. A., Mohapatra, A. K., Acharya, V., and <strong>Vani Lakshmi, R.</strong> (2023). Influence of home-based pulmonary rehabilitation program among people with interstitial lung disease: A pre-post study. Physiotherapy Theory and Practice. <a href=\"https://doi.org/10.1080/09593985.2023.2245878\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.8"}, {"idx": 94, "year": 2023, "text": "Amonkar, D. D. B., Genovese, V., De Gregorio, V., Travaglione, A., Uppangala, S., <strong>Vani Lakshmi, R.</strong>, Kalthur, G., Gualtieri, R., Talevi, R., and Adiga, S. K. (2023). Impact of prepubertal bovine ovarian tissue pre-freeze holding duration on follicle quality. Reproductive Biology, 23(3), 100794. <a href=\"https://doi.org/10.1016/j.repbio.2023.100794\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.3"}, {"idx": 95, "year": 2023, "text": "Kamath, R., Brand, H., Arun, H. R., <strong>Vani Lakshmi, R.</strong>, Sharma, N., and D'souza, R. M. C. (2023). Spatial patterns in the distribution of hypertension among men and women in India and its relationship with health insurance coverage. Healthcare, 11(11), 1630. <a href=\"https://doi.org/10.3390/healthcare11111630\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.4"}, {"idx": 96, "year": 2023, "text": "Kamath, R., Brand, H., Nayak, N., <strong>Lakshmi, V.</strong>, Verma, R., and Salins, P. (2023). District-level patterns of health insurance coverage and out-of-pocket expenditure on caesarean section deliveries in public health facilities in India. Sustainability, 15(5), 4608. <a href=\"https://doi.org/10.3390/su15054608\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.3"}, {"idx": 97, "year": 2023, "text": "Sheik, S. M., Pai, K. S., Mamatha, B. S., Mallya, H. M., <strong>Iyer, V. L.</strong>, Suryakanth, V. B., Manel, D. N., Shettigar, P. M., and Shenoy, R. P. (2023). Phytochemical screening, proximate composition, and antihyperlipidemic activity of the barley-rich nutraceutical combination in triton X-100-induced hyperlipidemic Wistar rats. Journal of Applied Pharmaceutical Science, 13(2), 154-160. [<a href=\"https://doi.org/][10.7324/JAPS.2023.130217](https://dx.doi.org/10.7324/JAPS.2023.130217)\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.2"}, {"idx": 98, "year": 2023, "text": "Kanagaraj, S., Ramdoss, S., Sigafoos, J., Kancharla, K., <strong>Vani Lakshmi, R.</strong>, Ram Gopal, C. N., Sabari Sridhar, O. T., and Karthikeyan, S. (2023). Development and validation of the social-emotional rating scale for autism spectrum disorder (SERA) in an Indian sample. International Journal of Developmental Disabilities, 1-9. <a href=\"https://doi.org/10.1080/20473869.2023.2170005\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.5"}, {"idx": 99, "year": 2022, "text": "Singh, S., <strong>Lakshmi, V.</strong>, Somu, G., and Kamath, R. (2022). Determinants of hospital choice among patients and perceptions of the same among hospital employees in a tertiary care corporate hospital in Mumbai, India. The Open Public Health Journal, 15(1). [Q3]"}, {"idx": 100, "year": 2022, "text": "Kamath, R., <strong>Lakshmi, V.</strong>, and Brand, H. (2022). Health index scores and health insurance coverage across India: A state level spatiotemporal analysis. Clinical Epidemiology and Global Health, 18, 101185. <a href=\"https://doi.org/10.1016/j.cegh.2022.101185\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 101, "year": 2022, "text": "Meitei, H. Y., Uppangala, S., <strong>Vani Lakshmi, R</strong>., Guddattu, V., Hegde, P., Kumar, P., Adiga, P., Kalthur, G., Schlatt, S., and Adiga, S. K. (2022). Sperm characteristics in normal and abnormal ejaculates are differently influenced by the length of ejaculatory abstinence. Andrology, 10(7), 1351-1360. <a href=\"https://doi.org/10.1111/andr.13222\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 3.1"}, {"idx": 102, "year": 2022, "text": "Jijo, A., Cheredath, A., Uppangala, S., <strong>Vani Lakshmi, R</strong>., Joseph, D., Meitei, H. Y., Asampille, G., Kumar, P., Gowda, G. A. N., Kalthur, G., and Kovacic, B. (2022). ICSI in non-male factor infertility patients does not alter metabolomic signature in sibling embryos as evidenced by sensitivity enhanced nuclear magnetic resonance (NMR) spectroscopy. PLoS ONE, 17(9), e0273321. <a href=\"https://doi.org/10.1371/journal.pone.0273321\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.9"}, {"idx": 103, "year": 2022, "text": "Kanagaraj, S., Kancharla, K., Sridhar, O. S., <strong>Lakshmi, R. V.</strong>, Karthikeyan, S., Gopal, C. R., and Ramdoss, S. (2022). A randomized control trial of cognitive behavior and emotional enhancement intervention for children with autism spectrum disorder. Advances in Neurodevelopmental Disorders. <a href=\"https://doi.org/10.1007/s41252-022-00283-5\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.6"}, {"idx": 104, "year": 2022, "text": "Cheredath, A., Uppangala, S., Jijo, A., <strong>Vani Lakshmi, R.</strong>, Kumar, P., Joseph, D., Gowda, G. A. N., Kalthur, G., and Adiga, S. K. (2022). Combining machine learning with metabolomic and embryologic data improves embryo implantation prediction. Reproductive Sciences. <a href=\"https://doi.org/10.1007/s43032-022-01071-1\" target=\"_blank\" rel=\"noopener\">link</a> [Q1] IF: 2.6"}, {"idx": 105, "year": 2022, "text": "Kumar, P. N., Ravi, R., <strong>Lakshmi, V. R.</strong>, and Gunjawate, D. R. (2022). Development and validation of Speech-Language Pathology Occupational Stress Questionnaire (SLP-OSQ). Clinical Epidemiology and Global Health, 17, 101130. <a href=\"https://doi.org/10.1016/j.cegh.2022.101130\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 106, "year": 2022, "text": "Mayya, S. S., Martis, M., Mayya, A., <strong>Iyer, V. L.,</strong> and Ramesh, A. (2022). Academic stress among pre-university students of the commerce stream: A study in Karnataka. Pertanika Journal of Social Sciences and Humanities, 30(2). [Q1] IF: 0.6"}, {"idx": 107, "year": 2022, "text": "Badagabettu, S., Archana, M. V., Jomon, C. U., and <strong>Vani Lakshmi, R.</strong> (2022). Awareness on thalassemia and opinion of carrier screening among young women from selected undergraduate colleges of Udupi district. Clinical Epidemiology and Global Health, 14, 100978. <a href=\"https://doi.org/10.1016/j.cegh.2022.100978\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 2.1"}, {"idx": 108, "year": 2022, "text": "Meitei, H. Y., Uppangala, S., <strong>Vani Lakshmi, R.</strong>, Kalthur, G., and Adiga, S. K. (2022). Semen characteristics of individuals before and after Covishield vaccination. Reproduction and Fertility, 3(3), 216-219. [Q3]"}, {"idx": 109, "year": 2022, "text": "Rajpurohit, S., Musunuri, B., Mohan, P. B., <strong>Vani Lakshmi, R.</strong>, Bhat, G., and Shetty, S. (2022). Predictors for oesophageal candidiasis in patients with liver cirrhosis. Le Infezioni in Medicina, 31(1), 79. [Q2] IF: 1.0"}, {"idx": 110, "year": 2022, "text": "Jacob, S. S., Lukose, J., Bankapur, A., Mithun, N., <strong>Lakshmi, R. V.</strong>, Acharya, M., Rao, P., Kamath, A., Baby, P. M., Rao, R. K., and Chidangil, S. (2022). Micro-Raman spectroscopy study of optically trapped erythrocytes in malaria, dengue and leptospirosis infections. Frontiers in Medicine, 9. [Q2] IF: 3.1"}, {"idx": 111, "year": 2022, "text": "Mayya, S. S., Mayya, A., Martis, M., and <strong>Lakshmi, R. V.</strong> (2022). Academic stress and associated sociodemographic variables: A study of pre-university students in Karnataka, India. Journal of Education and Health Promotion, 11(1), 230. <a href=\"https://doi.org/10.4103/jehp.jehp_1265_21\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.6"}, {"idx": 112, "year": 2022, "text": "Cheredath, A., Uppangala, S., Asampille, G., <strong>Vani Lakshmi, R.</strong>, Joseph, D., Raval, K., Gowda, G. A. N., Kalthur, G., and Adiga, S. K. (2022). Duration of dry and humidified incubation of single-step embryo culture medium and oxygen tension during sham culture do not alter medium composition. F1000Research, 11(242), 242. <a href=\"https://doi.org/10.12688/f1000research.11-242\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 1.39"}, {"idx": 113, "year": 2022, "text": "Archana, M. V., Vijayasekharan, K., Munikoty, V., Bhat, R. R., Achyutrao, A., <strong>Vani Lakshmi, R.</strong>, and Vasudeva, K. (2022). Practice of L-asparaginase usage: A survey among healthcare providers treating children with cancer in India. South Asian Journal of Cancer. <a href=\"https://doi.org/10.1055/s-0043-1767811\" target=\"_blank\" rel=\"noopener\">link</a> [Q4]"}, {"idx": 114, "year": 2022, "text": "Rajpurohit, S., Musunuri, B., Mohan, P. B., <strong>Vani Lakshmi, R.</strong>, Bhat, G., and Shetty, S. (2022). Potential predictors for oesophageal candidiasis in liver cirrhosis patient: A retrospective study. Journal of Clinical and Experimental Hepatology. <a href=\"https://doi.org/10.1016/j.jceh.2022.07.112\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 3.3"}, {"idx": 115, "year": 2021, "text": "Shenoy, N., Ballal, V., Rani, U., Kotian, H., and <strong>Lakshmi, V.</strong> (2021). Assessment of knowledge, attitude and practices among dental practitioners on methods of infection control while carrying out dental procedures during novel coronavirus (COVID-19) pandemic. Pan African Medical Journal, 39(1). [Q3] IF: 0.7"}, {"idx": 116, "year": 2021, "text": "<strong>Vani Lakshmi, R. (2021)</strong>. Marry me, later?: Changing landscapes of legal age of marriage for women in India. Vichar Manthan."}, {"idx": 117, "year": 2020, "text": "<strong>Vani Lakshmi, R.</strong> (2020). A chance encounter with e-learning and the way forward. Higher Education Digest. <a href=\"https://www.highereducationdigest.com/a-chance-encounter-with-e-learning-and-theway-forward-a-teachers-perspective/\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 118, "year": 2020, "text": "Jacob, S. S., Bankapur, A., Barkur, S., Acharya, M., Chidangil, S., Rao, P., Kamath, A., <strong>Lakshmi, R. V.,</strong> Baby, P. M., and Rao, R. K. (2020). Micro-Raman spectroscopy analysis of optically trapped erythrocytes in jaundice. Frontiers in Physiology, 11, 821. <a href=\"https://doi.org/10.3389/fphys.2020.00821\" target=\"_blank\" rel=\"noopener\">link</a> [Q2] IF: 3.4"}, {"idx": 119, "year": 2016, "text": "Vaidyanathan, V. S., and <strong>Vani Lakshmi, R.</strong> (2016). Estimation of parameters in a finite mixture of multivariate gamma distributions using Gaussian approximation. Sri Lankan Journal of Applied Statistics, 17(3), 187-200. <a href=\"https://doi.org/10.4038/sljastats.v17i3.7902\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 120, "year": 2016, "text": "<strong>Vani Lakshmi, R.,</strong> and Vaidyanathan, V. S. (2016). Parameter estimation in gamma mixture model using normal-based approximation. Journal of Statistical Theory and Applications, 15(1), 25-35. <a href=\"https://doi.org/10.2991/jsta.2016.15.1.3\" target=\"_blank\" rel=\"noopener\">link</a> [Q4]"}, {"idx": 121, "year": 2016, "text": "<strong>Vani Lakshmi, R.,</strong> and Vaidyanathan, V. S. (2016). Three-parameter gamma distribution: Estimation using likelihood, spacings and least squares approach. Journal of Statistics and Management Systems, 19(1), 37-53. <a href=\"https://doi.org/10.1080/09720510.2014.986927\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 122, "year": 2016, "text": "<strong>Vani Lakshmi, R.,</strong> and Vaidyanathan, V. S. (2016). On the use of least squares, likelihood and spacings in estimating the parameters of generalized gamma distribution. In Statistical modelling and analysis techniques (pp. 83-92). Narosa Publishing House."}, {"idx": 123, "year": 2015, "text": "Vaidyanathan, V. S., and <strong>Vani Lakshmi, R.</strong> (2015). Parameter estimation in multivariate gamma distribution. Statistics, Optimisation and Information Computing, 3(2), 147-159. <a href=\"https://doi.org/10.19139/soic.v3i2.95\" target=\"_blank\" rel=\"noopener\">link</a>"}, {"idx": 124, "year": 2015, "text": "<strong>Vani Lakshmi, R</strong>. (2015). Clean campus - Safe campus. Suraksha, 37(2), 26-28."}, {"idx": 125, "year": 2014, "text": "<strong>Vani Lakshmi, R</strong>. (2014). Women safety: A behavioral safety perspective. Suraksha, 36(2), 32-35."}]</script>
+<script>
+// === Tab navigation ===
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(target).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// === Publications by year ===
+(function(){
+  const data = JSON.parse(document.getElementById('pubs-data').textContent);
+  const yearsContainer = document.getElementById('pubYears');
+  const listContainer = document.getElementById('pubList');
+  if (!yearsContainer || !listContainer) return;
+
+  // Group by year
+  const byYear = {};
+  data.forEach(p => {
+    const y = p.year;
+    if (!byYear[y]) byYear[y] = [];
+    byYear[y].push(p);
+  });
+  const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+
+  // Build year tab buttons
+  const allBtn = document.createElement('button');
+  allBtn.className = 'year-btn active';
+  allBtn.dataset.year = 'all';
+  allBtn.innerHTML = 'All <span class="yr-count">' + data.length + '</span>';
+  yearsContainer.appendChild(allBtn);
+  years.forEach(y => {
+    const b = document.createElement('button');
+    b.className = 'year-btn';
+    b.dataset.year = String(y);
+    b.innerHTML = y + ' <span class="yr-count">' + byYear[y].length + '</span>';
+    yearsContainer.appendChild(b);
+  });
+
+  function render(yr) {
+    listContainer.innerHTML = '';
+    let pubs;
+    if (yr === 'all') {
+      // Show all, sorted by year desc, with year displayed
+      pubs = data.slice().sort((a, b) => b.year - a.year);
+    } else {
+      pubs = byYear[yr];
+    }
+    pubs.forEach((p, i) => {
+      const item = document.createElement('div');
+      item.className = 'pub-item';
+      item.innerHTML = '<div class="pub-year">' + p.year + '</div><div class="pub-text">' + p.text + '</div>';
+      listContainer.appendChild(item);
+    });
+  }
+
+  yearsContainer.addEventListener('click', e => {
+    const btn = e.target.closest('.year-btn');
+    if (!btn) return;
+    yearsContainer.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.year);
+  });
+
+  render('all');
+})();
+</script>
+
+</body>
+</html>
